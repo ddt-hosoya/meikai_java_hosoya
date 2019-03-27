@@ -17,9 +17,9 @@ public class e02_06 {
 		//文字を表示する。
 		System.out.println("高さ：");
 		//キーボードで読み込んだ値を実数値として宣言する。
-		double high = StdIn.nextDouble();
+		double height = StdIn.nextDouble();
 
 		//三角形の面積を表示する。
-		System.out.println("面積は" + ((bottom * high) / 2) + "です。");
+		System.out.println("面積は" + ((bottom * height) / 2) + "です。");
 		}
 }
