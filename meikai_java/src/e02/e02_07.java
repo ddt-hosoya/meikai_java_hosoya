@@ -11,16 +11,27 @@ import java.util.Random;
 public class e02_07 {
 	public static void main(String[] args) {
 		Random rand = new Random();
+		// 1桁の正の整数を算出するためのランダム生成する範囲を宣言する。
+		final int INT_RANDOM_DIGIT1 = 9;
+		// 1桁の正の整数を算出するための調整値を宣言する。
+		final int INT_ADJUST_DIGIT1 = 1;
 		// 1桁の正の値をランダムに生成して整数型で宣言する。
-		int positive_integer = rand.nextInt(9) + 1;
+		int positive_integer = rand.nextInt(INT_RANDOM_DIGIT1) + INT_ADJUST_DIGIT1;
 		// 値を表示する。
 		System.out.println(positive_integer + "は1桁の正の整数です。");
+		// 1桁の負の整数を算出するためのランダム生成する範囲を宣言する。
+		final int INT_RANDOM_NEGATIVE_DIGIT1 = 9;
+		// 1桁の負の整数を算出するための調整値を宣言する。
+		final int INT_ADJUST_NEGATIVE_DIGIT1 = -9;
 		// 1桁の負の値をランダムに生成して整数型で宣言する。
-		int negative_integer = rand.nextInt(9) - 9;
+		int negative_integer = rand.nextInt(INT_RANDOM_NEGATIVE_DIGIT1) + INT_ADJUST_NEGATIVE_DIGIT1;
 		// 値を表示する。
 		System.out.println(negative_integer + "は1桁の負の整数です。");
+		final int INT_RANDOM_DIGIT2 = 90;
+		// 1桁の負の整数を算出するための調整値を宣言する。
+		final int INT_ADJUST_DIGIT2 = 10;
 		// 2桁の正の値をランダムに生成して整数型で宣言する。
-		int double_digit_integer = rand.nextInt(90) + 10;
+		int double_digit_integer = rand.nextInt(INT_RANDOM_DIGIT2) + INT_ADJUST_DIGIT2;
 		// 値を表示する。
 		System.out.println(double_digit_integer + "は2桁の正の整数です。");
 	}
