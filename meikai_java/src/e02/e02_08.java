@@ -18,17 +18,17 @@ public class e02_08 {
 		final int INT_ADJUST_AROUND5 = -5;
 
 		// 0～10の整数値に調整値-5を足して±5の乱数を生成する。
-		int int_adjust_random = rand.nextInt(INT_RANDOM_INTEGER) + INT_ADJUST_AROUND5;
+		int intAdjustRandom = rand.nextInt(INT_RANDOM_INTEGER) + INT_ADJUST_AROUND5;
 
 		// 文字を表示する。
 		System.out.print("整数値：");
 		// キーボードから値を読み込んだ値を整数値として宣言する。
-		int int_input = stdIn.nextInt();
+		int intInput = stdIn.nextInt();
 
 		// キーボードから読み込んだ値と±5の乱数で値を生成する。
-		int int_input_around5 = int_input + int_adjust_random;
+		int intInputAround5 = intInput + intAdjustRandom;
 		// キーボードから読み込んだ値と±5の乱数で生成した結果を表示する。
-		System.out.println("その値の±5の乱数を生成しました。それは" + int_input_around5 + "です。");
+		System.out.println("その値の±5の乱数を生成しました。それは" + intInputAround5 + "です。");
 
 	}
 }
