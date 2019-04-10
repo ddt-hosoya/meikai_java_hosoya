@@ -10,6 +10,7 @@ import java.util.Random;
 
 public class e02_09 {
 	public static void main(String[] args) {
+		// ランダムクラスの乱数を生成するインスタンスを実体化する。
 		Random rand = new Random();
 		// 0.0～10.0の実数値を生成するための調整値
 		final int ADJUST_DOUBLE_UNDER10 = 10;
