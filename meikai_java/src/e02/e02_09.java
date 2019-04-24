@@ -19,10 +19,10 @@ public class e02_09 {
 		double doubleUnder1 = rand.nextDouble();
 		// 0.0～10.0の実数値をランダムに生成する。
 		double doubleUnder10 = doubleUnder1 * ADJUST_DOUBLE_UNDER10;
-		// 0.0～1.0の実数値をランダムに生成し、-1.0～1.0の実数値を求める調整値とする。
-		double adjustDoubleUnder1 = rand.nextDouble();
+		// 0または1の整数値をランダムに生成し、-1.0～1.0の実数値を求める調整値とする。
+		int adjustInt = rand.nextInt(2);
 		// -1.0～1.0の実数値をランダムに生成する。
-		double doubleAround1 = doubleUnder1 - adjustDoubleUnder1;
+		double doubleAround1 = doubleUnder1 - adjustInt;
 
 		// 0.0以上1.0未満の実数値をランダムに生成して表示する。
 		System.out.println("0.0以上1.0未満の実数値：" + doubleUnder1);
