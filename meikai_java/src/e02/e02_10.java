@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class e02_10 {
 	public static void main(String[] args){
+		//Scannerクラスの標準入力ストリームを実体化する。
 		Scanner stdIn = new Scanner(System.in);
 		// 姓という文字を表示する。
 		System.out.print("姓：");
