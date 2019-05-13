@@ -17,13 +17,13 @@ public class e03_01 {
 		int outputInt;
 
 		// 入力した値が負の場合は入力した値の符号を反転した値を絶対値とする。
-		if (inputInt < 0)
+		if (inputInt < 0) {
 			outputInt = -inputInt;
 
 		// 入力した値が0以上の場合は入力した値を絶対値とする。
-		else
+		} else {
 			outputInt = inputInt;
-
+		}
 		// 絶対値を表示する。
 		System.out.println("その絶対値は" + outputInt + "です。");
 	}
