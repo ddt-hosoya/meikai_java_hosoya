@@ -11,12 +11,13 @@ public class e03_03 {
 		System.out.print("整数値：");
 		int n = stdIn.nextInt();
 
-		if (n > 0)
+		if (n > 0) {
 			System.out.println("その値は正です。");
-		else if (n < 0)
+		} else if (n < 0) {
 			System.out.println("その値は負です。");
-		else if (n == 0)
+		} else if (n == 0) {
 			System.out.println("その値は0です。");
+		}
 	}
 
 }
