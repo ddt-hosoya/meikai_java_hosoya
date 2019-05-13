@@ -19,9 +19,10 @@ public class e03_02 {
 		System.out.print("整数値B：");
 		int integarB = stdIn.nextInt();
 
-		if ((integarA % integarB) == 0)
+		if ((integarA % integarB) == 0) {
 			System.out.println("BはAの約数です。");
-		else
-			System.out.println("AはBの約数ではありません。");
+		} else {
+			System.out.println("BはAの約数ではありません。");
+		}
 	}
 }
