@@ -17,12 +17,12 @@ public class e03_05 {
 		// 入力値をint型で宣言する。
 		int inputInt = stdIn.nextInt();
 		// 割る数5を宣言する。
-		final int adjustInt = 5;
+		final int ADJUSTINT = 5;
 
 		// 入力された値が正の場合
-		if (inputInt >= 0) {
+		if (inputInt > 0) {
 			// 5で割り切れる場合
-			if ((inputInt % adjustInt) == 0) {
+			if ((inputInt % ADJUSTINT) == 0) {
 				// 『その値は5で割り切れます。』と表示する。
 				System.out.println("その値は5で割り切れます。");
 				// 5で割り切れない場合
