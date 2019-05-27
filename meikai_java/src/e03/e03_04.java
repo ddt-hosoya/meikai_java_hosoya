@@ -21,12 +21,12 @@ public class e03_04 {
 		// 入力した文字を変数bに代入する。
 		int b = stdIn.nextInt();
 
-		// aとbが同じ値でない場合で、aからbを引いた値が0より大きい場合
-		if ((a - b) > 0) {
+		// aがbより大きい場合
+		if (a > b) {
 			// aのほうが大きいです。と表示する。
 			System.out.println("aのほうが大きいです。");
-		// aとbが同じ値でない場合で、aからbを引いた値が0より小さい場合
-		} else if ((a - b) < 0) {
+		// bがaより大きい場合
+		} else if (a < b) {
 			// bのほうが大きいです。と表示する。
 			System.out.println("bのほうが大きいです。");
 		// aとbが同じ値の場合
