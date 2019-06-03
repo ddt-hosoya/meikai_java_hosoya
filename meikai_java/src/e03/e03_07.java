@@ -10,20 +10,20 @@ import java.util.Scanner;
 
 public class e03_07 {
 	public static void main(String[] args) {
-		// Scannerクラスの標準入力ストリームを実体化する。
+		// 入力機能の実体化
 		Scanner stdIn = new Scanner(System.in);
-		// 「整数値：」という文字を表示する。
+		// ユーザーが入力する文字の制約を表示する
 		System.out.print("整数値：");
-		// 入力した文字をint型で宣言する。
+		// 入力値を割られる数として変数に代入
 		int inputInt = stdIn.nextInt();
-		// 割る数3を宣言する。
+		// 仕様である3で割った余りを検査するための数値を定数化
 		final int ADJUST_INT = 3;
-		// 余りを入れる変数を宣言する。
+		// 仕様である3で割った余りを求め、その値を入れる変数を宣言
 		int remainder;
 
 		// 入力値が正の数の場合
 		if (inputInt > 0) {
-			// 余りを計算する。
+			// 余りを求める
 			remainder = inputInt % ADJUST_INT;
 			// 余りが0の場合
 			if (remainder == 0) {
@@ -40,7 +40,7 @@ public class e03_07 {
 			}
 		// 入力値が正でない場合
 		} else {
-			// 『正でない値が入力されました。』と表示する。
+			// 適切な値以外が入力された主旨を表示する。
 			System.out.println("正でない値が入力されました。");
 		}
 	}
