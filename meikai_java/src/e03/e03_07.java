@@ -23,7 +23,7 @@ public class e03_07 {
 
 		// 入力値が正の数の場合
 		if (inputInt > 0) {
-			// 余りを求める
+			// 仕様である3で割った値が何であるかを求めるため余りを計算する
 			remainder = inputInt % ADJUST_INT;
 			// 余りが0の場合
 			if (remainder == 0) {
