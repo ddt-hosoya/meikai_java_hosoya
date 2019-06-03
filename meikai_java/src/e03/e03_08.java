@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class e03_08 {
 	public static void main(String[] args) {
-		// Scannerクラスの標準入力ストリームを実体化する
+		// 入力機能を実体化
 		Scanner stdIn = new Scanner(System.in);
-		// 点数を入力してください
+		// ユーザーに点数入力を求める文言を表示
 		System.out.print("点数を入力してください。：");
-		// 入力値をint型で宣言する
+		// 入力値を判定するための変数に代入
 		int scores = stdIn.nextInt();
 		// 0~59が入力された場合
 		if (scores >= 0 && scores <= 59) {
