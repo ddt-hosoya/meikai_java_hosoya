@@ -5,7 +5,7 @@ package e03;
 import java.util.Scanner;
 
 public class e03_09 {
-	public static void main(System[] args){
+	public static void main(String[] args){
 		// Scannerクラスの標準入力ストリームを実体化する
 		Scanner stdIn = new Scanner(System.in);
 		// 実数値：と表示する
