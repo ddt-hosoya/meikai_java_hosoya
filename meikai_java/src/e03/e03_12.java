@@ -6,33 +6,33 @@ import java.util.Scanner;
 
 public class e03_12 {
 	public static void main(String[] args){
-		// Scannerクラスの標準入力ストリームを実体化する
+		// 入力機能を実体化する
 		Scanner stdIn = new Scanner(System.in);
-		// 整数値：と表示する
+		// ユーザーに対して入力の制約を表示する
 		System.out.print("整数値：");
-		// 入力値をint型で宣言する
+		// 入力値を最小値を検査するための変数に代入
 		int inputIntFirst = stdIn.nextInt();
-		// 整数値：と表示する
+		// ユーザーに対して入力の制約を表示する
 		System.out.print("整数値：");
-		// 入力値をint型で宣言する
+		// 入力値を最小値を検査するための変数に代入
 		int inputIntSecond = stdIn.nextInt();
-		// 整数値：と表示する
+		// ユーザーに対して入力の制約を表示する
 		System.out.print("整数値：");
-		// 入力値をint型で宣言する
+		// 入力値を最小値を検査するための変数に代入
 		int inputIntThird = stdIn.nextInt();
 
-		// minを最初の入力値で初期化する
+		// 最小値を格納する変数minを最初の入力値で初期化する
 		int min = inputIntFirst;
 
 		// 二つ目の入力値がminより小さい場合
 		if(inputIntSecond < min){
-			// 二つ目の入力値をminに代入する
+			// 二つ目の入力値をminとする
 			min = inputIntSecond;
 		}
 
 		// 三つ目の入力値がminよりも小さい場合
 		if(inputIntThird < min){
-			// 三つ目の入力値をminに代入する
+			// 三つ目の入力値をminとする
 			min = inputIntThird;
 		}
 
