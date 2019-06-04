@@ -7,15 +7,15 @@ import java.util.Scanner;
 
 public class e03_11 {
 	public static void main(String[] args){
-		// Scannerクラスの標準入力ストリームを実体化する
+		// 入力機能を実体化する
 		Scanner stdIn = new Scanner(System.in);
-		// 整数値A：を表示する
+		// ユーザーに対して入力値の制約を表示する
 		System.out.print("整数値A：");
-		// 入力値をint型で宣言する
+		// 入力値を仕様である差を検査するための変数に代入する
 		int inputIntA = stdIn.nextInt();
-		// 整数値A：を表示する
+		// ユーザーに対して入力値の制約を表示する
 		System.out.print("整数値B：");
-		// 入力値をint型で宣言する
+		// 入力値を仕様である差を検査するための変数に代入する
 		int inputIntB = stdIn.nextInt();
 
 		// 大きいほうの値から小さいほうの値を引き、結果の差を変数に代入
@@ -23,11 +23,11 @@ public class e03_11 {
 
 		// 差が10以下の場合
 		if (difference <= 10){
-			// 差が10以下ですと表示する
+			// 差が10以下の文言を表示
 			System.out.println("それらの差は10以下です。");
 		// 差が11以上の場合
 		} else {
-			// 差が11以上ですと表示する
+			// 差が11以上の文言を表示
 			System.out.println("それらの差は11以上です。");
 		}
 	}
