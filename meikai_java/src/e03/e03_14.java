@@ -6,18 +6,18 @@ package e03;
 import java.util.Scanner;
 public class e03_14 {
 	public static void main(String[] args){
-		// Scannerクラスの標準入力ストリームを実体化する
+		// 入力機能をを実体化する
 		Scanner stdIn = new Scanner(System.in);
-		// 整数値：と表示する
+		// ユーザーに対して入力値の制約を表示する
 		System.out.print("整数値：");
-		// 入力値をint型で宣言する
+		// 入力値を小さいほうの値、大きいほうの値を検査するための変数に代入
 		int inputFirst = stdIn.nextInt();
-		// 整数値：と表示する
+		// ユーザーに対して入力値の制約を表示する
 		System.out.print("整数値：");
-		// 入力値をint型で宣言する
+		// 入力値を小さいほうの値、大きいほうの値を検査するための変数に代入
 		int inputSecond = stdIn.nextInt();
 
-		// 変数min,maxを宣言する
+		// 小さいほうの値をいれる変数min、大きいほうの値をいれる変数maxを宣言する
 		int min, max;
 		// 二つの入力値が等しい場合
 		if(inputFirst == inputSecond){
