@@ -36,7 +36,7 @@ public class e04_03 {
 			// minの値を表示する
 			System.out.print(min + " ");
 			// minをインクリメントする
-			min = min + 1;
+			min++;
 		// minが入力した大きいほうの数に満たなければ繰り返し処理を行う
 		} while(min != max);
 
