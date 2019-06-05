@@ -14,19 +14,14 @@ public class e04_11 {
 		// カウントダウン開始の数とする変数を宣言する
 		int startNumber;
 
-		// ユーザーに対して正の整数値の入力を促す
-		System.out.print("正の整数値：");
-		// 入力値をカウントダウン開始の数とする変数に代入する
-		int inputInt = stdIn.nextInt();
-
-		// カウントダウン開始する数をいれる変数に入力値を代入し、その数が0以下の場合再度入力を促す処理を繰り返す
-		// 入力を促す処理を実行後に入力値をカウントダウン開始する数をいれる変数に入力値を代入
-		for(startNumber = inputInt; startNumber <= 0; startNumber = stdIn.nextInt()){
+		// 入力値が0以下の場合、入力を促す処理を繰り返す
+		// 入力した値をカウントダウン開始の数を入れる変数に代入する
+		for(startNumber = 0; startNumber <= 0; startNumber = stdIn.nextInt()){
 			// ユーザーに対して正の整数値の入力を促す
-			System.out.print("正の整数値：");			
+			System.out.print("正の整数値：");
 		}
-		// 表示する値を入れる変数countdownを入力値で初期化し、countdownが0になるまで処理を繰り返す。
-		// 処理実行後にcountdownをデクリメントする。
+		// カウントダウンを入力した値startNumberから開始し0になるまで繰り返す。
+		// 表示処理実行後にカウントダウンする。
 		for(int countdown = startNumber; countdown >= 0; countdown--){
 			// 数を表示する
 			System.out.println(countdown);
