@@ -13,10 +13,10 @@ public class e05_04 {
 
 		// プログラムの説明を表示
 		System.out.println("整数値を読み込んで、その合計と平均を表示します。");
-		// 合計値を代入する変数をdouble型で宣言
-		double sum = 0.0;
+		// 合計値をいれる変数を初期化
+		int sum = 0;
 		// 三つの整数値の平均を求めるための調整値を定数化
-		final int DIVIDE_DOUBLE = 3;
+		final double DIVIDE_DOUBLE = 3.0;
 
 		// 入力とその入力値の加算を3回繰り返す
 		for(int count = 0; count < DIVIDE_DOUBLE; count++){
