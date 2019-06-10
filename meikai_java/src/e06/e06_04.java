@@ -20,15 +20,15 @@ public class e06_04 {
 		// 入力した要素数の配列を生成
 		int[] intArray = new int[valueNumber];
 		// 生成する乱数の範囲を定数化
-		final int randomNumber = 10;
+		final int RANDOM_NUMBER = 10;
 
 		// 要素数分処理を繰り返す
 		for(int valueCount = 0; valueCount < valueNumber; valueCount++){
 			// 要素にランダムに生成した1から10の整数を代入する
-			intArray[valueCount] = 1 + rand.nextInt(randomNumber);
+			intArray[valueCount] = 1 + rand.nextInt(RANDOM_NUMBER);
 		}
 		// 10行分表示処理を繰り返す
-		for(int line = randomNumber; line > 0; line--){
+		for(int line = RANDOM_NUMBER; line > 0; line--){
 			// 要素数分処理を繰り返す
 			for(int column = 0; column < valueNumber; column++){
 				// 要素の値がその行数より大きい値の場合
@@ -55,7 +55,7 @@ public class e06_04 {
 		// インデックスの表示処理
 		for(int column = 0; column < valueNumber; column++){
 			// インデックスを10で割った余剰を表示
-			System.out.printf("%2d", column%randomNumber);
+			System.out.printf("%2d", column%RANDOM_NUMBER);
 		}
 		// 改行する
 		System.out.println();
