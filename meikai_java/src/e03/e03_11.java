@@ -9,6 +9,10 @@ public class e03_11 {
 	public static void main(String[] args){
 		// 入力機能を実体化する
 		Scanner stdIn = new Scanner(System.in);
+
+		// 差が10かどうかを判定数るための値10を定数化
+		final int ADJUST_INT = 10;
+
 		// ユーザーに対して入力値の制約を表示する
 		System.out.print("整数値A：");
 		// 入力値を仕様である差を検査するための変数に代入する
@@ -22,7 +26,7 @@ public class e03_11 {
 		int difference = inputIntA > inputIntB ? (inputIntA - inputIntB) : (inputIntB - inputIntA);
 
 		// 差が10以下の場合
-		if (difference <= 10){
+		if (difference <= ADJUST_INT){
 			// 差が10以下の文言を表示
 			System.out.println("それらの差は10以下です。");
 		// 差が11以上の場合
