@@ -17,12 +17,12 @@ public class e03_17 {
 
 		// 生成した乱数の値に応じて処理を行う
 		switch(randomInt){
-		// 生成した乱数の値が0の場合の文言を表示
-		case 0: System.out.print("グー"); break;
-		// 生成した乱数の値が1の場合の文言を表示
-		case 1: System.out.print("チョキ"); break;
-		// 生成した乱数の値が2の場合の文言を表示
-		case 2: System.out.print("パー"); break;
+			// 生成した乱数の値が0の場合の文言を表示
+			case 0: System.out.print("グー"); break;
+			// 生成した乱数の値が1の場合の文言を表示
+			case 1: System.out.print("チョキ"); break;
+			// 生成した乱数の値が2の場合の文言を表示
+			case 2: System.out.print("パー"); break;
 		}
 	}
 }
