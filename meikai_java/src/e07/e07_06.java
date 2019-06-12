@@ -17,6 +17,8 @@ public class e07_06 {
 		if(n >= 9 && n <= 11){System.out.println("秋");}
 		// 12または1または2が入力された場合、冬と表示
 		if(n == 12 || n == 1 || n == 2){System.out.println("冬");}
+		// mainメソッドに返却する
+		return;
 	}
 	// mainメソッド
 	public static void main(String[] args){
