@@ -46,6 +46,10 @@ public class e03_18 {
 			case 2:
 				// 12,1,2が入力された場合の季節を表示する
 				System.out.println(month + "月は冬です"); break;
+			// 1から12以外の数字が入力された場合
+			default:
+				System.out.println(month + "月はありません。"); break;
+
 		}
 	}
 
