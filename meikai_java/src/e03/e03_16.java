@@ -46,7 +46,7 @@ public class e03_16 {
 		}
 
 		// 二つ目に表示する変数secondNumberより三つ目に表示する変数thirdNumberの値が小さい場合順番を入れ替える
-		if(secondNumber > thirdNumber){
+		else if(secondNumber > thirdNumber){
 			// secondNumberの値を別の変数で保持する
 			int adjustIntSecond = secondNumber;
 			//二つ目に表示する変数secondNumberにthirdNumberに入っていた値を代入
