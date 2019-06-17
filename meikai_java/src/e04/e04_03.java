@@ -38,10 +38,8 @@ public class e04_03 {
 			// minをインクリメントする
 			min++;
 		// minが入力した大きいほうの数に満たなければ繰り返し処理を行う
-		} while(min != max);
+		} while(min <= max);
 
-		// 入力した大きいほうの数を表示する
-		System.out.print(max);
 	}
 
 }
