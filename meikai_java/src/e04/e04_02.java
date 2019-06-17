@@ -32,11 +32,11 @@ public class e04_02 {
 			System.out.print("いくつかな：");
 			// 入力値を数が当たっているか判定するための変数に代入する
 			expectedInt = stdIn.nextInt();
-			// 入力値が当てる数よりも小さい場合
+			// 入力値が当てる数よりも大きい場合
 			if(expectedInt > no){
 				// 当てる数が入力値より小さい数であるという文言を表示する
 				System.out.println("もっと小さな数だよ。");
-			// 入力値が当てる数よりも大きい場合
+			// 入力値が当てる数よりも小さい場合
 			} else if(expectedInt < no){
 				// 当てる数が入力値より大きい数であるという文言を表示する
 				System.out.println("もっと大きな数だよ。");
