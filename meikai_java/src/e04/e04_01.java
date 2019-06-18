@@ -21,14 +21,12 @@ public class e04_01 {
 			if (n > 0){
 				// 正であることを表示
 				System.out.println("その値は正です。");
-			}
 			// 入力値が0より小さい場合
-			else if (n < 0){
+			}else if (n < 0){
 				// 負であることを表示
 				System.out.println("その値は負です。");
-			}
 			// 入力値が0の場合
-			else{
+			}else{
 				// 0であることを表示
 				System.out.println("その値は0です。");
 			}
