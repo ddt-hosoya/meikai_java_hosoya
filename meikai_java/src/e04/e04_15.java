@@ -30,7 +30,7 @@ public class e04_15 {
 			System.out.print("何cmまで:");
 		}
 		// 対応表の表示する間隔の入力を受け、0以下ならばもう一度処理を繰り返す
-		for(interval = 0; interval <= 0; interval = stdIn.nextInt()){
+		for(interval = 0; interval <= 0 || heightEnd - heightStart < interval; interval = stdIn.nextInt()){
 			// 対応表の表示する間隔の入力を促す
 			System.out.print("何cmごと:");
 		}
