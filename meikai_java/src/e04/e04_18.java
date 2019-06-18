@@ -12,7 +12,7 @@ public class e04_18 {
 		// 1からnまで処理を繰り返す
 		for(int number = 1; number <= n; number++){
 			// 数を2乗した結果を求める
-			int square = number*number;
+			int square = number * number;
 			// 2乗した結果を表示する
 			System.out.println(number + "の2乗は" + square + "です。");
 		}
