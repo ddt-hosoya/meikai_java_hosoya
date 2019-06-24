@@ -56,13 +56,4 @@ public class e09_03_Day {
 		// 日付が一致していればtrueを返し一致していなければfalseを返す
 		return year == day.year && month == day.month && date == day.date;
 	}
-
-	// 文字列表現を返却
-	public String toString(){
-		// 曜日の配列
-		String[] wd = {"日", "月", "火", "水", "木", "金", "土"};
-		// 日付を年月日(曜日)で表した文字列を返す
-		return String.format("%04d年%02d月%02d日(%s)",
-				year, month, date, wd[dayOfWeek()]);
-	}
 }
