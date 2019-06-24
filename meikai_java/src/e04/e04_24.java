@@ -33,8 +33,8 @@ public class e04_24 {
 				break;
 			}
 		}
-		// 2以上入力値未満のいずれの数でも割り切れない場合
-		if(divideInt == inputInt){
+		// 入力値が1である。または、2以上入力値未満のいずれの数でも割り切れない場合
+		if(inputInt == 1 || divideInt == inputInt){
 			// 素数である主旨の文言を表示
 			System.out.println(inputInt + "は素数です。");
 		}
