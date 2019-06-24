@@ -32,9 +32,9 @@ public class e09_03 {
 		return balance;
 	}
 	// 口座開設日を調べる
-	public e09_03_Day getOpenDay(){
+	public String getOpenDay(){
 		openDay = new e09_03_Day(openDay);
-		return openDay;
+		return toString();
 	}
 	// k円預ける
 	public void deposit(long k){
@@ -44,5 +44,12 @@ public class e09_03 {
 	public void withdraw(long k){
 		balance -= k;
 	}
-
+	// 文字列表現を返却
+	public String toString(){
+		// 曜日の配列
+		String[] wd = {"日", "月", "火", "水", "木", "金", "土"};
+		// 日付を年月日(曜日)で表した文字列を返す
+		return String.format("%04d年%02d月%02d日(%s)",
+				openDay.getYear(), openDay.getMonth(), openDay.getDate(), wd[openDay.dayOfWeek()]);
+	}
 }
