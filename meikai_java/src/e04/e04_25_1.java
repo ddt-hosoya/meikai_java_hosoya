@@ -12,10 +12,16 @@ public class e04_25_1 {
 		Scanner stdIn = new Scanner(System.in);
 		// プログラムの説明を表示
 		System.out.println("整数を加算します。");
-		// ユーザーに対して入力を促す
-		System.out.print("何個加算しますか。：");
-		// 入力値を加算する回数を判定するための変数に代入
-		int n = stdIn.nextInt();
+		// 入力値を加算する回数を宣言
+		int n;
+		// 繰り返し処理
+		do{
+			// ユーザーに対して入力を促す
+			System.out.print("何個加算しますか。：");
+			// 入力値を加算する回数を判定するための変数に代入
+			n = stdIn.nextInt();
+		// 入力値が0以下の場合繰り返す
+		}while(n <= 0);
 
 		// 合計値を求めるための変数を初期化
 		int sum = 0;
