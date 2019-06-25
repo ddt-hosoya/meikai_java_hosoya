@@ -4,8 +4,10 @@ package e06;
  */
 public class e06_01 {
 	public static void main(String[] args){
+		// 要素数が5を定数化
+		final int VALUE_NUMBER = 5;
 		// 要素型がdouble型で要素数が5の配列を生成
-		double[] doubleArray = new double[5];
+		double[] doubleArray = new double[VALUE_NUMBER];
 
 		// 配列の要素doubleArray[1]に37.5を代入
 		doubleArray[1] = 37.5;
@@ -14,16 +16,11 @@ public class e06_01 {
 		// 配列の要素doubleArray[4]に75.0を代入
 		doubleArray[4] = doubleArray[1] * 2;
 
-		// doubleArray[0]の要素の値を表示
-		System.out.println("doubleArray[0] = " + doubleArray[0]);
-		// doubleArray[1]の要素の値を表示
-		System.out.println("doubleArray[1] = " + doubleArray[1]);
-		// doubleArray[2]の要素の値を表示
-		System.out.println("doubleArray[2] = " + doubleArray[2]);
-		// doubleArray[3]の要素の値を表示
-		System.out.println("doubleArray[3] = " + doubleArray[3]);
-		// doubleArray[4]の要素の値を表示
-		System.out.println("doubleArray[4] = " + doubleArray[4]);
+		// 配列の全要素を表示
+		for(int index = 0; index < VALUE_NUMBER; index++){
+			// doubleArray[index]の要素の値を表示
+			System.out.println("doubleArray[" + index + "] = " + doubleArray[index]);
+		}
 
 	}
 }
