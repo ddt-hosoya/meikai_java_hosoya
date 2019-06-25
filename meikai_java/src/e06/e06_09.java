@@ -12,11 +12,17 @@ public class e06_09 {
 		Random rand = new Random();
 		// 入力機能を実体化
 		Scanner stdIn = new Scanner(System.in);
+		// 要素数をいれる変数を宣言
+		int valueNumber;
+		// 繰り返し処理
+		do{
+			// ユーザーに対して要素数の入力を促す
+			System.out.print("要素数：");
+			// 入力値を配列の要素数とする変数に代入する
+			valueNumber = stdIn.nextInt();
+		// 要素数が負の数の場合繰り返す
+		}while(valueNumber < 0);
 
-		// ユーザーに対して要素数の入力を促す
-		System.out.print("要素数：");
-		// 入力値を配列の要素数とする変数に代入する
-		int valueNumber = stdIn.nextInt();
 
 		// 配列を生成
 		int[] intArray = new int[valueNumber];
