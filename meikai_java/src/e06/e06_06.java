@@ -10,11 +10,16 @@ public class e06_06 {
 	public static void main(String[] arg){
 		// 入力機能を実体化
 		Scanner stdIn = new Scanner(System.in);
-
-		// ユーザーに対して人数の入力を促す
-		System.out.print("人数：");
-		// 入力値を配列の要素数として代入
-		int peopleNumber = stdIn.nextInt();
+		// 人数をいれる変数を宣言
+		int peopleNumber;
+		// 繰り返し処理
+		do{
+			// ユーザーに対して人数の入力を促す
+			System.out.print("人数：");
+			// 入力値を配列の要素数として代入
+			peopleNumber = stdIn.nextInt();
+		// 人数が0人以下の場合繰り返す
+		}while(peopleNumber <= 0);
 		// 入力した要素数の配列を生成
 		int[] scoresArray = new int[peopleNumber];
 
