@@ -13,10 +13,17 @@ public class e06_04 {
 		Random rand = new Random();
 		// 入力機能を実体化
 		Scanner stdIn = new Scanner(System.in);
-		// ユーザーに対して入力を促す
-		System.out.print("要素数：");
-		// 入力値を要素数として変数に代入
-		int valueNumber = stdIn.nextInt();
+		// 要素数を入れる変数を宣言
+		int valueNumber;
+		// 繰り返し処理
+		do{
+			// ユーザーに対して入力を促す
+			System.out.print("要素数：");
+			// 入力値を要素数として変数に代入
+			valueNumber = stdIn.nextInt();
+		// 入力した要素数が負の数の場合繰り返す
+		}while(0 > valueNumber);
+
 		// 入力した要素数の配列を生成
 		int[] intArray = new int[valueNumber];
 		// 生成する乱数の範囲を定数化
@@ -55,7 +62,7 @@ public class e06_04 {
 		// インデックスの表示処理
 		for(int column = 0; column < valueNumber; column++){
 			// インデックスを10で割った余剰を表示
-			System.out.printf("%2d", column%RANDOM_NUMBER);
+			System.out.printf("%2d", column % RANDOM_NUMBER);
 		}
 		// 改行する
 		System.out.println();
