@@ -10,14 +10,22 @@ public class e06_05 {
 	public static void main(String[] args){
 		// 入力機能を実体化
 		Scanner stdIn = new Scanner(System.in);
-		// 要素数の入力を促す
-		System.out.print("要素数：");
-		// 入力値を要素数として定数化
-		final int VALUE_NUMBER = stdIn.nextInt();
+		// 要素数をいれる変数を宣言
+		int valueNumber;
+		// 繰り返し処理
+		do{
+			// 要素数の入力を促す
+			System.out.print("要素数：");
+			// 入力値を要素数にいれる
+			valueNumber = stdIn.nextInt();
+		// 入力した要素数が負の数の場合、繰り返す
+		}while(valueNumber < 0);
+
 		// 入力した要素数の配列を生成
-		int intArray[] = new int[VALUE_NUMBER];
+		int intArray[] = new int[valueNumber];
+
 		// 要素数分処理を繰り返す
-		for(int index = 0; index < VALUE_NUMBER; index++){
+		for(int index = 0; index < valueNumber; index++){
 			// 要素の値の入力を求める
 			System.out.print("intArray[" + index + "] = ");
 			// 入力値を要素に代入
@@ -26,7 +34,7 @@ public class e06_05 {
 		// // 各要素の値の表示
 		System.out.print("intArray = {");
 		// 要素数分処理を繰り返す
-		for(int index = 0; index < VALUE_NUMBER; index++){
+		for(int index = 0; index < valueNumber; index++){
 
 			// インデックス0以外の時値の表示の前にコンマを表示する
 			if(index != 0){ System.out.print(", "); }
