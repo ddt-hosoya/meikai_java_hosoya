@@ -13,10 +13,16 @@ public class e06_19 {
 		Scanner stdIn = new Scanner(System.in);
 		// 配列変数を宣言
 		int[][] classScoreArray;
-		// クラス数の入力を促す
-		System.out.print("クラス数：");
-		// 入力値をクラス数として読み込む
-		int classNumber = stdIn.nextInt();
+		// クラス数を入れる変数
+		int classNumber;
+		do{
+			// クラス数の入力を促す
+			System.out.print("クラス数：");
+			// 入力値をクラス数として読み込む
+			classNumber = stdIn.nextInt();
+		// 入力値が負の数の場合再入力させる
+		}while(classNumber < 0);
+
 		// 入力された数の構成要素をもつ配列を生成
 		classScoreArray = new int[classNumber][];
 
@@ -28,10 +34,16 @@ public class e06_19 {
 
 		// 各クラスの人数と全員の点数を読み込み
 		for (int line = 0; line < classNumber; line++) {
-			// クラスの人数の入力を促す
-			System.out.print((line + ADJUST_INT) + "組の人数：");
-			// 入力値をクラスの人数として読み込む
-			int peopleNumber = stdIn.nextInt();
+			// クラスの人数を入れる変数
+			int peopleNumber;
+			do{
+				// クラスの人数の入力を促す
+				System.out.print((line + ADJUST_INT) + "組の人数：");
+				// 入力値をクラスの人数として読み込む
+				peopleNumber = stdIn.nextInt();
+			// 入力値が負の数の場合再入力させる
+			}while(peopleNumber < 0);
+
 			// 各クラスが人数に応じて配列を生成
 			classScoreArray[line] = new int[peopleNumber];
 
