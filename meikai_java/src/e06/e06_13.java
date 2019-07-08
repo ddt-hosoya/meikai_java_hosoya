@@ -9,10 +9,16 @@ public class e06_13 {
 	public static void main(String[] args){
 		// 入力機能の実体化
 		Scanner stdIn = new Scanner(System.in);
-		// ユーザーに対して要素数の入力を促す
-		System.out.print("要素数：");
-		// 入力値を要素数として変数に代入
-		int valueNumber = stdIn.nextInt();
+		// 要素数をいれる変数を宣言
+		int valueNumber;
+		do{
+			// ユーザーに対して要素数の入力を促す
+			System.out.print("要素数：");
+			// 入力値を要素数として変数に代入
+			valueNumber = stdIn.nextInt();
+		// 入力値が負の数の場合再入力させる
+		}while(valueNumber < 0);
+
 
 		// 配列aを生成
 		int[] a = new int[valueNumber];
