@@ -12,15 +12,21 @@ public class e06_18 {
 		Scanner stdIn = new Scanner(System.in);
 		// 配列変数を宣言
 		int[][] c;
-		// 行数の入力を促す
-		System.out.print("行数：");
-		// 入力された数を行数として定数化
-		final int LINE = stdIn.nextInt();
+		// 行数を入れる変数
+		int line;
+		do{
+			// 行数の入力を促す
+			System.out.print("行数：");
+			// 入力された数を行数として定数化
+			line = stdIn.nextInt();
+		// 入力値が負の数の場合再入力させる
+		}while(line < 0);
+
 		// 入力された数の構成要素をもつ配列を生成
-		c = new int[LINE][];
+		c = new int[line][];
 
 		// 各行の列数を読み込む
-		for(int index = 0; index < LINE; index++){
+		for(int index = 0; index < line; index++){
 			// 各行の列数の入力を促す
 			System.out.print("c[" + index + "]の列数：");
 			// 入力値を列数とする
