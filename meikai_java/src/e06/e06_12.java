@@ -12,10 +12,15 @@ public class e06_12 {
 		// 入力機能を実体化
 		Scanner stdIn = new Scanner(System.in);
 
-		// ユーザーに対して要素数の入力を促す
-		System.out.print("要素数：");
-		// 入力値を要素数にいれる
-		int valueNumber = stdIn.nextInt();
+		// 要素数をいれる変数を宣言
+		int valueNumber;
+		do{
+			// ユーザーに対して要素数の入力を促す
+			System.out.print("要素数：");
+			// 入力値を要素数にいれる
+			valueNumber = stdIn.nextInt();
+		// 入力値が負の数の場合再入力させる
+		}while(valueNumber < 0);
 
 		// 入力した要素数の配列を生成する
 		int[] intArray = new int[valueNumber];
