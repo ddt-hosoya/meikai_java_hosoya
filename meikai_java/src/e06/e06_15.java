@@ -23,13 +23,9 @@ public class e06_15 {
 		// 学習プログラムの説明を表示
 		System.out.println("英語の曜日名を小文字で入力してください。");
 		// 乱数で曜日の値を生成するための値を定数化
-		final int WEEKDAY = 7;
-		// 初期値を定数化
-		final int DEFAULT = 0;
+		final int WEEKDAY = weekEnglish.length;
 		// 同一曜日を連続して出題しないように直前に出題した曜日を保持しておく変数を初期化
-		int previousWeekday = DEFAULT;
-		// 何回目の出題かカウントする変数
-		int count = DEFAULT;
+		int previousWeekday = weekEnglish.length;
 		// 再度出題するかどうかの回答者の返答をいれる変数を宣言
 		int again;
 		// 配列のインデックスを宣言
@@ -40,7 +36,7 @@ public class e06_15 {
 				// 0から6の乱数で生成し、曜日の配列のインデックスとする
 				weekdayIndex = rand.nextInt(WEEKDAY);
 			// 生成した乱数が直前に出題した値と同じ場合、もう一度乱数の生成をおこなう
-			}while(count != 0 && weekdayIndex == previousWeekday);
+			}while(weekdayIndex == previousWeekday);
 
 			// 正解するまで繰り返す
 			while(true){
@@ -64,7 +60,6 @@ public class e06_15 {
 					System.out.println("違います。");
 				}
 			}
-			count++;
 		// 再度出題するかどうかの回答者の返答がYesならばもう一度出題する
 		}while(again == 1);
 	}
