@@ -10,6 +10,10 @@ public class e07_03 {
 	 *
 	 *  @author t.hosoya
 	 *  @since 20190612
+	 *  @param a 中央値を求める3つの値のうちのひとつ
+	 *  @param b 中央値を求める3つの値のうちのひとつ
+	 *  @param c 中央値を求める3つの値のうちのひとつ
+	 *  @return int 中央値
 	 *
 	 */
 	static int med(int a, int b, int c){
