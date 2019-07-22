@@ -11,6 +11,10 @@ public class e07_02 {
 	 *
 	 *  @author t.hosoya
 	 *  @since 20190612
+	 *  @param a 最小値を求める対象の3つの値のうちの一つ
+	 *  @param b 最小値を求める対象の3つの値のうちの一つ
+	 *  @param c 最小値を求める対象の3つの値のうちの一つ
+	 *  @return int 最小値
 	 *
 	 */
 	static int min(int a, int b, int c){
