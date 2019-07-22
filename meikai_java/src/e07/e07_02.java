@@ -6,10 +6,12 @@ int min(int a, int b, int c)
 import java.util.Scanner;
 
 public class e07_02 {
-	/*
+	/**
 	 *  三つのint型引数a,b,cの最小値を求めるメソッド
+	 *
 	 *  @author t.hosoya
 	 *  @since 20190612
+	 *
 	 */
 	static int min(int a, int b, int c){
 		// aを仮に最小値とする
