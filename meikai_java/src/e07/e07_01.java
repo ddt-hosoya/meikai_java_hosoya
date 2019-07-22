@@ -12,6 +12,8 @@ public class e07_01 {
 	 *  受け取ったint型引数の値nが負であれば-1を返却し、0であれば0を返却し、正であれば1を返却するメソッド
 	 *  @author t.hosoya
 	 *  @since 20190612
+	 *  @param n 判定する対象の値
+	 *  @return int 正負0を表す値
 	 *
 	 */
 	static int signOf(int n){
