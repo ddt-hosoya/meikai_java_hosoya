@@ -7,10 +7,12 @@ import java.util.Scanner;
 
  */
 public class e07_01 {
-	/*
+	/**
+	 *
 	 *  受け取ったint型引数の値nが負であれば-1を返却し、0であれば0を返却し、正であれば1を返却するメソッド
 	 *  @author t.hosoya
 	 *  @since 20190612
+	 *
 	 */
 	static int signOf(int n){
 		// 負の場合の返却値を定数化
