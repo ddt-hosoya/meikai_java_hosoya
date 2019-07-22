@@ -5,7 +5,13 @@ import java.util.Scanner;
 int med(int a, int b, int c)
  */
 public class e07_03 {
-	// 三つのint型引数a,b,cの中央値を求めるメソッド
+	/**
+	 *  三つのint型引数a,b,cの中央値を求めるメソッド
+	 *
+	 *  @author t.hosoya
+	 *  @since 20190612
+	 *
+	 */
 	static int med(int a, int b, int c){
 		// cを仮に中央値とする
 		int med = c;
