@@ -4,7 +4,13 @@ package e07;
 void hello()
  */
 public class e07_05 {
-	//『こんにちは。』と表示するメソッド
+	/**
+	 * 『こんにちは。』と表示するメソッド
+	 *
+	 * @author t.hosoya
+	 * @since 20190612
+	 *
+	 */
 	static void hello(){
 		// こんにちはと表示する
 		System.out.println("こんにちは。");
