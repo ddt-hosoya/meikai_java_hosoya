@@ -5,7 +5,15 @@ import java.util.Scanner;
 int sumUp(int n)
  */
 public class e07_04 {
-	// 1からnまでの全整数の和を求めて返却するメソッド
+	/**
+	 *  1からnまでの全整数の和を求めて返却するメソッド
+	 *
+	 * @author t.hosoya
+	 * @since 20190612
+	 * @param n いくつまでの整数の和を求めるのか
+	 * @return int 求めた和
+	 *
+	 */
 	static int sumUp(int n){
 		// 和を求める変数
 		int sum = 0;
