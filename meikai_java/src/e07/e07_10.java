@@ -8,7 +8,13 @@ import java.util.Scanner;
 public class e07_10 {
 	// 入力機能を実体化
 	static Scanner stdIn = new Scanner(System.in);
-	// 続行の確認をおこなうメソッド
+	/**
+	 *  続行の確認をおこなうメソッド
+	 * @author t.hosoya
+	 * @since 20190613
+	 * @return boolean 続行するか否か
+	 *
+	 */
 	static boolean confirmRetry(){
 		// 続行するかどうかをいれる変数
 		int cont;
