@@ -5,7 +5,13 @@ package e07;
 import java.util.Scanner;
 
 public class e07_16 {
-	// 配列aの最小値求めるメソッド
+	/**
+	 *  配列aの最小値求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 最小値を求める対象の配列
+	 * @return int 配列の中の最小の要素
+	 */
 	static int minOf(int[] a){
 		// 最小値を入れる変数
 		int min = a[0];
