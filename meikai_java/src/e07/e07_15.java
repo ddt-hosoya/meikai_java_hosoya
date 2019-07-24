@@ -5,7 +5,13 @@ package e07;
 import java.util.Scanner;
 
 public class e07_15 {
-	// 配列aの全要素の合計を求めるメソッド
+	/**
+	 *  配列aの全要素の合計を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 要素数を求める配列
+	 * @return int 配列の要素数
+	 */
 	static int sumOf(int[] a){
 		// 合計値を入れる変数
 		int sum = 0;
