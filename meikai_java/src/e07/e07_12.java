@@ -9,7 +9,13 @@ package e07;
 import java.util.Scanner;
 public class e07_12 {
 
-	// 整数のビット表示を行うメソッド
+	/**
+	 *  整数のビット表示を行うメソッド
+	 * @author t.hosoya
+	 * @since 20190614
+	 * @param number ビット表示する整数
+	 *
+	 */
 	static void putBits(int number){
 		// 32ビット分順番に表示する
 		for(int bitNum = 31; bitNum >= 0; bitNum--){
@@ -20,7 +26,13 @@ public class e07_12 {
 		System.out.println();
 	}
 
-	// 右にnビット回転した値を返すメソッド
+	/**
+	 *  右にnビット回転した値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190614
+	 * @param x 回転する整数
+	 * @param n 右に回転するビット数
+	 */
 	static void rRotate(int x, int n){
 		// 右にnビットシフト
 		int rightShift = x >>> n;
@@ -34,7 +46,13 @@ public class e07_12 {
 		putBits(rRotate);
 	}
 
-	// 左にnビット回転した値を返すメソッド
+	/**
+	 *  左にnビット回転した値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190614
+	 * @param x 回転する整数
+	 * @param n 左に回転するビット数
+	 */
 	static void lRotate(int x, int n){
 		// 左にnビットシフト
 		int leftShift = x << n;
