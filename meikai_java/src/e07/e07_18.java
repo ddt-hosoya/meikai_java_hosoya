@@ -8,7 +8,13 @@ void aryRmv(int[] a, int idx)
 import java.util.Scanner;
 
 public class e07_18 {
-	// 配列aから要素a[idx]を削除するメソッド
+	/**
+	 *  配列aから要素a[idx]を削除するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 編集対象の配列
+	 * @param idx 削除する要素のインデックス
+	 */
 	static void aryRmv(int[] a, int idx){
 		// インデックスの値を調整するための値を宣言する
 		final int ADJUST_INT = 1;
