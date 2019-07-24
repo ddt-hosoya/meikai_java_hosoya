@@ -6,14 +6,26 @@ List7-7に表示したnこの'*'を連続表示するputStarsを、
 import java.util.Scanner;
 
 public class e07_07 {
-	// 文字cをn個連続で表示するメソッド
+	/**
+	 *  文字cをn個連続で表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190612
+	 * @param c 表示する文字列
+	 * @param n 表示する文字列の段数
+	 */
 	static void putChars(char c, int n){
 		// n回繰り返す
 		while(n-- > 0)
 			// 文字cを表示
 			System.out.print(c);
 	}
-	// 文字*を指定してputCharsを呼び出す
+	/**
+	 * 文字*を指定してputCharsを呼び出すメソッド
+	 * @author t.hosoya
+	 * @since 20190612
+	 * @param n 表示する文字列の段数
+	 *
+	 */
 	static void putStars(int n){
 		putChars('*', n);
 	}
