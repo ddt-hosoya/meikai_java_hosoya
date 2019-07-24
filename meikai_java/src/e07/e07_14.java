@@ -11,7 +11,12 @@ public class e07_14 {
 	static int adjustOne = 1;
 	static int adjust = 0;
 
-	// 整数のビット表示を行うメソッド
+	/**
+	 *  整数のビット表示を行うメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param number ビット表示するメソッド
+	 */
 	static void putBits(int number){
 		// 32ビット分順番に表示する
 		for(int bitNum = 31; bitNum >= 0; bitNum--){
@@ -21,7 +26,15 @@ public class e07_14 {
 		// 改行する
 		System.out.println();
 	}
-	// 整数xのposビット目を最下位として連続するn個のビットを、1にした値を返すメソッド
+	/**
+	 *  整数xのposビット目を最下位として連続するn個のビットを、1にした値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param x 編集対象の整数
+	 * @param pos ビットを1にする最下位のビット目
+	 * @param n 1にするビットの個数
+	 * @return int 編集後の整数
+	 */
 	static int setN(int x, int pos, int n){
 		// posビット目から左にn個分を連続する1にした値を調整値とする
 		for(int index=0; index < n; index++){
@@ -43,7 +56,15 @@ public class e07_14 {
 		return setResult;
 	}
 
-	// 整数xのposビット目を最下位として連続するn個のビットを、0にした値を返すメソッド
+	/**
+	 *  整数xのposビット目を最下位として連続するn個のビットを、0にした値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param x 編集対象の整数
+	 * @param pos ビットを0にする最下位のビット目
+	 * @param n 0にするビットの個数
+	 * @return int 編集後の整数
+	 */
 	static int resetN(int x, int pos, int n){
 		// posビット目から左にn個分を連続する1にした値を調整値とする
 		for(int index=0; index < n; index++){
@@ -67,7 +88,15 @@ public class e07_14 {
 		return resetResult;
 	}
 
-	// 整数xのposビット目を最下位として連続するn個のビットを、反転した値を返すメソッド
+	/**
+	 *  整数xのposビット目を最下位として連続するn個のビットを、反転した値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param x 編集対象の整数
+	 * @param pos ビットを反転する最下位のビット目
+	 * @param n 反転するビットの個数
+	 * @return int 編集後の整数
+	 */
 	static int inverseN(int x, int pos, int n){
 		// 調整値の値を初期化する
 		adjust = 0;
