@@ -7,7 +7,12 @@ int readPlusInt()
 import java.util.Scanner;
 
 public class e07_09 {
-	// 整数値を読み込んで、その値を返却するメソッド
+	/**
+	 *  整数値を読み込んで、その値を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190613
+	 * @return int 入力された正の整数
+	 */
 	static int readPlusInt(){
 		// 入力機能を実体化
 		Scanner stdIn = new Scanner(System.in);
