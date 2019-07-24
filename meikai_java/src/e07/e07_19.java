@@ -8,7 +8,14 @@ void aryRmvN(int[] a,int idx, int n
 import java.util.Scanner;
 
 public class e07_19 {
-	// 配列aから要素a[idx]を先頭とするn個の要素を削除するメソッド
+	/**
+	 *  配列aから要素a[idx]を先頭とするn個の要素を削除するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 編集対象の配列
+	 * @param idx 削除する要素の先頭のインデックス
+	 * @param n いくつ前方に移動するかの個数
+	 */
 	static void aryRmvN(int[] a, int idx, int n){
 		// インデックスの値を調整するための値を宣言する
 		final int ADJUST_INT = 1;
