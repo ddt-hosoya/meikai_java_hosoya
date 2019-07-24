@@ -9,7 +9,15 @@ int random(int a, int b)
 import java.util.Scanner;
 
 public class e07_08 {
-	// a以上b以下の乱数を生成して、その値を返却するメソッド
+	/**
+	 *  a以上b以下の乱数を生成して、その値を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190612
+	 * @param a 乱数生成するための下限
+	 * @param b 乱数生成するための上限
+	 * @return int 生成した乱数
+	 *
+	 */
 	static int random(int a, int b){
 		// 乱数生成機能を実体化
 		Random rand = new Random();
