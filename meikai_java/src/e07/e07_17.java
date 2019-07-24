@@ -5,14 +5,28 @@ package e07;
  */
 import java.util.Scanner;
 public class e07_17 {
+	// 要素が存在しない場合の返り値を定数化
 	static final int NO_FOUND = -1;
+	/**
+	 * 探索するキーと同じ値の要素が複数個存在する場合、最も末尾側に位置する要素を見つけるメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 探索する配列
+	 * @param key 探索するキー
+	 * @return int キーと一致する要素があるインデックス
+	 */
 	static int linerSearchR(int[] a, int key){
+		// 配列のインデックスの最大を求めるための調整値
 		final int ADJUST_INT = 1;
+		// 配列のインデックスの大きいほうから探索
 		for(int index = (a.length - ADJUST_INT); index >= 0; index--){
+			// キーと一致する要素があれば
 			if(a[index] == key){
+				// そのインデックスを返す
 				return index;
 			}
 		}
+		// キーと一致する要素がなければ-1を返す
 		return NO_FOUND;
 	}
 
