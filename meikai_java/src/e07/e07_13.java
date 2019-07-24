@@ -10,7 +10,12 @@ public class e07_13 {
 	// posビット目を1,0,反転した値にするための調整値
 	static int base = 1;
 
-	// 整数のビット表示を行うメソッド
+	/**
+	 *  整数のビット表示を行うメソッド
+	 * @author t.hosoya
+	 * @since 20190614
+	 * @param number 表示する整数
+	 */
 	static void putBits(int number){
 		// 32ビット分順番に表示する
 		for(int bitNum = 31; bitNum >= 0; bitNum--){
@@ -21,7 +26,14 @@ public class e07_13 {
 		System.out.println();
 	}
 
-	// posビット目を1にした値を返すメソッド
+	/**
+	 *  posビット目を1にした値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190614
+	 * @param x 変更する整数
+	 * @param pos 1にするビット目
+	 * @return int 指定ビット目を1にした整数
+	 */
 	static int set(int x, int pos){
 		// posビット目を1にするためにposビット目のみを1にした値を調整値として宣言
 		int adjust = base << pos;
@@ -35,7 +47,14 @@ public class e07_13 {
 		return setResult;
 	}
 
-	// posビット目を0にした値を返すメソッド
+	/**
+	 *  posビット目を0にした値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190614
+	 * @param x 変更する整数
+	 * @param pos 0にするビット目
+	 * @return int 指定ビット目を0にした整数
+	 */
 	static int reset(int x, int pos){
 		// posビット目を0にするためにposビット目のみを1にした値を調整値として宣言
 		int adjust = base << pos;
@@ -51,7 +70,14 @@ public class e07_13 {
 		return resetResult;
 	}
 
-	// posビット目を反転した値を返すメソッド
+	/**
+	 *  posビット目を反転した値を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190614
+	 * @param x 変更する整数
+	 * @param pos 反転するビット目
+	 * @return int 指定ビット目を反転した整数
+	 */
 	static int inverse(int x, int pos){
 		//  posビット目を反転した値をいれる変数宣言
 		int inverseResult;
