@@ -5,7 +5,13 @@ package e07;
 import java.util.Scanner;
 
 public class e07_22 {
-	// 配列aと同じ配列を生成して返却するメソッド
+	/**
+	 * 配列aと同じ配列を生成して返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 複製元になる配列
+	 * @return int[] 複製した配列
+	 */
 	static int[] arrayClone(int[] a){
 		// 配列aと同じ要素数の配列を生成
 		int[] clone = new int[a.length];
