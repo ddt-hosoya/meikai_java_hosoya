@@ -7,7 +7,14 @@ void aryExchng(int[] a, int[] b)
 import java.util.Scanner;
 
 public class e07_21 {
-	// 配列aと配列bの全要素の値を交換するメソッド
+	/**
+	 * 配列aと配列bの全要素の値を交換するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 要素を交換する配列a
+	 * @param b 要素を交換する配列b
+	 *
+	 */
 	static void aryExchng(int[] a, int[] b){
 		int valueNumber;
 		// aの要素数がbの要素数以下の場合
