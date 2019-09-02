@@ -7,6 +7,15 @@ int[] arrayInsOf(int[] a,int idx, int x)
 import java.util.Scanner;
 
 public class e07_26 {
+	/**
+	 * 配列aの要素a[idx]にxを挿入した配列を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param a 配列a
+	 * @param idx 要素を挿入するインデックス
+	 * @param x 挿入する要素
+	 * @return int[] 配列aの要素a[idx]にxを挿入した配列
+	 */
 	static int[] arrayInsOf(int[] a,int idx, int x){
 		// 要素数の調整値を定数化
 		final int ADJUST_INT = 1;
