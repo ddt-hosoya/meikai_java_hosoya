@@ -5,7 +5,15 @@ List7-20のプログラムは、三つの配列x,y,zの行数および列数が�
  */
 
 public class e07_27 {
-	// 行列xとyの和をzに代入
+	/**
+	 * 三つの配列の要素が等しければ加算を行ってtrueを返し、等しくなければ加算を行わずにfalseを返すメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param x 行列x
+	 * @param y 行列y
+	 * @param z 行列z
+	 * @return boolean 要素が等しいか否か
+	 */
 	static boolean addMatrix(int[][] x, int[][] y, int[][] z){
 		// 三つの配列の行数が異なる場合
 		if(x.length != y.length || x.length != z.length){
@@ -28,7 +36,13 @@ public class e07_27 {
 		// trueを返す
 		return true;
 	}
-	// 行列mの全要素を表示
+	/**
+	 * 行列mの全要素を表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param m 表示する行列
+	 *
+	 */
 	static void printMatrix(int[][] m){
 		// 全行数分繰り返す
 		for(int i = 0; i < m.length; i++){
