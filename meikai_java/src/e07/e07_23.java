@@ -6,7 +6,14 @@ arraySrchIdxを作成せよ。
 import java.util.Scanner;
 
 public class e07_23 {
-	// 配列aの要素の中で値がxである全要素のインデックスを先頭から順に格納した配列を返却するメソッド
+	/**
+	 * 配列aの要素の中で値がxである全要素のインデックスを先頭から順に格納した配列を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 走査対象の配列
+	 * @param x 走査する要素
+	 * @return int[] インデックスを格納した配列
+	 */
 	static int[] arraySrchIdx(int[] a, int x){
 
 		// 返却する配列の要素数を数える変数
