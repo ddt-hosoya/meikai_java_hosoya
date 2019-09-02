@@ -7,7 +7,14 @@ void aryIns(int[] a,int idx, int x)
 挿入に伴ってa[idx]～a[a.length -2] を一つ後方にずらさなければならない。
  */
 public class e07_20 {
-	// 要素a[idx]にxを挿入するメソッド
+	/**
+	 * 要素a[idx]にxを挿入するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 編集対象の配列
+	 * @param idx 挿入する要素のインデックス
+	 * @param x 挿入する要素
+	 */
 	static void aryIns(int[] a, int idx, int x){
 		// インデックスの値を調整するための値を宣言する
 		final int ADJUST_INT = 1;
