@@ -6,6 +6,14 @@ package e07;
 import java.util.Scanner;
 
 public class e07_24 {
+	/**
+	 * 配列aから要素a[idx]を削除した配列を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 配列a
+	 * @param idx 削除する要素のインデックス
+	 * @return int[] 要素a[idx]を削除した配列
+	 */
 	static int[] arrayRmvOf(int[] a, int idx){
 		// 要素数の調整値を定数化
 		final int ADJUST_INT = 1;
