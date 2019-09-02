@@ -7,6 +7,15 @@ import java.util.Scanner;
 削除はa[idx]より後ろの全要素をn個前方向にずらすことによって行うこと。
  */
 public class e07_25 {
+	/**
+	 * 配列aの要素a[idx]を先頭とするn個の要素を削除した配列を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190617
+	 * @param a 配列a
+	 * @param idx 削除する先頭のインデックス
+	 * @param n 削除する要素数
+	 * @return int[] 配列aの要素a[idx]を先頭とするn個の要素を削除した配列
+	 */
 	static int[] arrayRmvOfN(int[] a, int idx, int n){
 		// 要素数の調整値を定数化
 		final int ADJUST_INT = 1;
