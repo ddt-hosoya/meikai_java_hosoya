@@ -4,6 +4,14 @@ package e07;
 行数および列数が同一の配列をxとyに受け取ることを前提としてよい。
  */
 public class e07_28 {
+	/**
+	 * 行列xとyの和を格納した２次元配列を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param x 行列x
+	 * @param y 行列y
+	 * @return int[][] 行列xとyの和を格納した２次元配列
+	 */
 	static int[][] addMatrix(int[][] x, int[][] y){
 		// 和を格納する二次元配列を生成する
 		int[][] newMatrix = new int[x.length][];
@@ -21,7 +29,12 @@ public class e07_28 {
 		return newMatrix;
 	}
 
-	// 行列mの全要素を表示
+	/**
+	 * 行列mの全要素を表示
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param m 行列m
+	 */
 	static void printMatrix(int[][] m){
 		// 全行数分繰り返す
 		for(int line = 0; line < m.length; line++){
