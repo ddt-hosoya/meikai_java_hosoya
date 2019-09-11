@@ -1,7 +1,7 @@
 package e07;
 /*
 「正の整数値：」と表示してキーボードから整数値を読み込んで、
-その値を返却するメソッドreadPlusIntを作成せよ。0や負の値が入力されtら再入力させること。
+その値を返却するメソッドreadPlusIntを作成せよ。0や負の値が入力されたら再入力させること。
 int readPlusInt()
  */
 import java.util.Scanner;
