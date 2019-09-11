@@ -31,12 +31,7 @@ public class e07_08 {
 			// aの値をそのまま返却する
 			return a;
 			}
-		// aの値が0の場合
-		if(a == 0){
-			// 0からbまでの乱数を生成
-			randomInt = rand.nextInt(b + ADJUST_INT);
-			}
-		// aが0ではない場合
+		// bの値がa以上場合
 		else{
 			// 乱数を生成する範囲を求める
 			int range = b - (a - ADJUST_INT);
