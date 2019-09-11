@@ -44,9 +44,10 @@ public class e07_10 {
 			// 4つの問題のうちどの問題を出題するかを決定する乱数
 			int question = rand.nextInt(4);
 
-		Question:
+			// 正否を入れる変数
+			boolean result = false;
 			// 正解するまで繰り返す
-			while(true){
+			while(!result){
 				// 回答を入れる変数
 				int answer;
 				//どの問題を出題するか判定
@@ -57,7 +58,7 @@ public class e07_10 {
 						// 入力値を回答として変数に入れる
 						answer = stdIn.nextInt();
 						// 正解したら繰り返しから抜ける
-						if(answer == x + y + z){ break Question; }
+						if(answer == x + y + z){ result = true; }
 						// switch文から抜ける
 						break;
 					case 1:
@@ -66,7 +67,7 @@ public class e07_10 {
 						// 入力値を回答として変数に入れる
 						answer = stdIn.nextInt();
 						// 正解したら繰り返しから抜ける
-						if(answer == x + y - z){ break Question; }
+						if(answer == x + y - z){ result = true; }
 						// switch文から抜ける
 						break;
 					case 2:
@@ -75,7 +76,7 @@ public class e07_10 {
 						// 入力値を回答として変数に入れる
 						answer = stdIn.nextInt();
 						// 正解したら繰り返しから抜ける
-						if(answer == x - y + z){ break Question; }
+						if(answer == x - y + z){ result = true; }
 						// switch文から抜ける
 						break;
 					case 3:
@@ -84,12 +85,12 @@ public class e07_10 {
 						// 入力値を回答として変数に入れる
 						answer = stdIn.nextInt();
 						// 正解したら繰り返しから抜ける
-						if(answer == x - y - z){ break Question; }
+						if(answer == x - y - z){ result = true; }
 						// switch文から抜ける
 						break;
 				}
-				// 不正解であることを表示
-				System.out.println("違いますよ！");
+				// 問題に不正解だった場合不正解であることを表示
+				if(!result){ System.out.println("違いますよ！"); }
 			}
 		// 続行するかどうか確認する
 		}while(confirmRetry());
