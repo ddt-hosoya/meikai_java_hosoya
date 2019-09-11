@@ -16,13 +16,18 @@ public class e07_06 {
 	 */
 	static void printSeason(int n){
 		// 3～5が入力された場合、春と表示
-		if(n >= 3 && n <= 5){System.out.println("春");}
+		if(n >= 3 && n <= 5){
+			System.out.println("春");
 		// 6～8が入力された場合、夏と表示
-		if(n >= 6 && n <= 8){System.out.println("夏");}
+		} else if(n >= 6 && n <= 8) {
+			System.out.println("夏");
 		// 9～11が入力された場合、秋と表示
-		if(n >= 9 && n <= 11){System.out.println("秋");}
+		} else if(n >= 9 && n <= 11) {
+			System.out.println("秋");
 		// 12または1または2が入力された場合、冬と表示
-		if(n == 12 || n == 1 || n == 2){System.out.println("冬");}
+		} else if(n == 12 || n == 1 || n == 2) {
+			System.out.println("冬");
+		}
 		// mainメソッドに返却する
 		return;
 	}
