@@ -18,11 +18,11 @@ public class e07_01 {
 	 */
 	static int signOf(int n){
 		// 負の場合の返却値を定数化
-		int NEGATIVE = -1;
+		final int NEGATIVE = -1;
 		// 0の場合の返却値を定数化
-		int ZERO = 0;
+		final int ZERO = 0;
 		// 正の場合の返却値を定数化
-		int POSITIVE = 1;
+		final int POSITIVE = 1;
 
 		// 負の場合、-1を返却する
 		if(n < 0){ return NEGATIVE; }
