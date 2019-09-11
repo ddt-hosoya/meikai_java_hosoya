@@ -25,13 +25,19 @@ public class e07_03 {
 		int max = a;
 
 		// bが最小値より小さい場合bを最小値とする
-		if(b < min){ min = b; }
+		if(b < min){
+			min = b;
 		// bが最大値より大きい場合bを最大値とする
-		if(b > max){ max = b; }
+		} else if(b > max) {
+			max = b;
+		}
 		// cが最小値より小さい場合、最小値に入っていた値を中央値とする
-		if(c < min){ med = min; }
+		if(c < min){
+			med = min;
 		// cが最大値より大きい場合、最大値に入っていた値を中央値とする
-		if(c > max){ med = max; }
+		} else if(c > max) {
+			med = max;
+		}
 		// 中央値を返却する
 		return med;
 	}
