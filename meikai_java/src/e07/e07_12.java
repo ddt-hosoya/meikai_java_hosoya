@@ -8,6 +8,8 @@ package e07;
  */
 import java.util.Scanner;
 public class e07_12 {
+	// ビット数を定数化
+	static final int BIT = 32;
 
 	/**
 	 *  整数のビット表示を行うメソッド
@@ -17,8 +19,10 @@ public class e07_12 {
 	 *
 	 */
 	static void putBits(int number){
+		// 調整値を定数化
+		int adjusut = 1;
 		// 32ビット分順番に表示する
-		for(int bitNum = 31; bitNum >= 0; bitNum--){
+		for(int bitNum = BIT - adjusut; bitNum >= 0; bitNum--){
 			// 第bitNumビットが1ならば1を、0ならば0を表示する
 			System.out.print((number >>> bitNum & 1) == 1 ? '1' : '0');
 		}
@@ -37,7 +41,7 @@ public class e07_12 {
 		// 右にnビットシフト
 		int rightShift = x >>> n;
 		// 左に32‐nビットシフト
-		int leftShift = x << (32 - n);
+		int leftShift = x << (BIT - n);
 		// 右にシフトした値と左にシフトした値で論理和演算し、右回転した場合の表示を再現する
 		int rRotate = rightShift | leftShift;
 		// 説明を表示
@@ -57,7 +61,7 @@ public class e07_12 {
 		// 左にnビットシフト
 		int leftShift = x << n;
 		// 右に32‐nビットシフト
-		int rightShift = x >>> (32 - n);
+		int rightShift = x >>> (BIT - n);
 		// 右にシフトした値と左にシフトした値で論理和演算し、左回転した場合の表示を再現する
 		int lRotate = rightShift | leftShift;
 		// 説明を表示
