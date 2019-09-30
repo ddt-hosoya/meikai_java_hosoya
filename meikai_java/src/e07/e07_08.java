@@ -30,7 +30,7 @@ public class e07_08 {
 		if(b < a){
 			// aの値をそのまま返却する
 			return a;
-			}
+		}
 		// bの値がa以上場合
 		else{
 			// 乱数を生成する範囲を求める
