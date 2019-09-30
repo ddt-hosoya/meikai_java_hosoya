@@ -81,17 +81,12 @@ public class e07_13 {
 	static int inverse(int x, int pos){
 		//  posビット目を反転した値をいれる変数宣言
 		int inverseResult;
+		// posビット目が1の値を生成
+		int flag = base << pos;
 		// 処理の内容を表示
 		System.out.println(pos + "ビット目を反転します。");
-		// 整数のposビット目が1の場合
-		if((x >>> pos & 1) == 1){
-			// posビット目を0に変更する
-			inverseResult = reset(x, pos);
-		// 整数のposビット目が0の場合
-		}else{
-			// posビット目を1に変更する
-			inverseResult = set(x,pos);;
-		}
+		// 整数のposビット目が1なら0に0なら1に反転する
+		inverseResult = x ^ flag;
 		// 変更した値を返す
 		return inverseResult;
 	}
