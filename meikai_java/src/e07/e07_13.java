@@ -87,6 +87,8 @@ public class e07_13 {
 		System.out.println(pos + "ビット目を反転します。");
 		// 整数のposビット目が1なら0に0なら1に反転する
 		inverseResult = x ^ flag;
+		// ビット内容の表示
+		putBits(inverseResult);
 		// 変更した値を返す
 		return inverseResult;
 	}
