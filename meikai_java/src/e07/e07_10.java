@@ -44,51 +44,56 @@ public class e07_10 {
 			// 4つの問題のうちどの問題を出題するかを決定する乱数
 			int question = rand.nextInt(4);
 
+			// 表示する問題文
+			String questionSentence = "";
+			// 正解
+			int correctAnswer = 0;
+			//どの問題を出題するか判定
+			switch(question){
+				case 0:
+					// 表示する問題文をつくる
+					questionSentence = x + " + " + y + " + " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x + y + z;
+					// switch文から抜ける
+					break;
+				case 1:
+					// 表示する問題文をつくる
+					questionSentence = x + " + " + y + " - " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x + y - z;
+					// switch文から抜ける
+					break;
+				case 2:
+					// 表示する問題文をつくる
+					questionSentence = x + " - " + y + " + " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x - y + z;
+					// switch文から抜ける
+					break;
+				case 3:
+					// 表示する問題文をつくる
+					questionSentence = x + " - " + y + " - " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x - y - z;
+					// switch文から抜ける
+					break;
+			}
+
 			// 正否を入れる変数
 			boolean result = false;
 			// 正解するまで繰り返す
 			while(!result){
 				// 回答を入れる変数
 				int answer;
-				//どの問題を出題するか判定
-				switch(question){
-					case 0:
-						// 問題文を表示
-						System.out.print(x + " + " + y + " + " + z + " = ");
-						// 入力値を回答として変数に入れる
-						answer = stdIn.nextInt();
-						// 正解したら繰り返しから抜ける
-						if(answer == x + y + z){ result = true; }
-						// switch文から抜ける
-						break;
-					case 1:
-						// 問題文を表示
-						System.out.print(x + " + " + y + " - " + z + " = ");
-						// 入力値を回答として変数に入れる
-						answer = stdIn.nextInt();
-						// 正解したら繰り返しから抜ける
-						if(answer == x + y - z){ result = true; }
-						// switch文から抜ける
-						break;
-					case 2:
-						// 問題文を表示
-						System.out.print(x + " - " + y + " + " + z + " = ");
-						// 入力値を回答として変数に入れる
-						answer = stdIn.nextInt();
-						// 正解したら繰り返しから抜ける
-						if(answer == x - y + z){ result = true; }
-						// switch文から抜ける
-						break;
-					case 3:
-						// 問題文を表示
-						System.out.print(x + " - " + y + " - " + z + " = ");
-						// 入力値を回答として変数に入れる
-						answer = stdIn.nextInt();
-						// 正解したら繰り返しから抜ける
-						if(answer == x - y - z){ result = true; }
-						// switch文から抜ける
-						break;
+				// 問題文を表示
+				System.out.print(questionSentence);
+				// 入力値を回答として変数に入れる
+				answer = stdIn.nextInt();
+				if(answer == correctAnswer){
+					result = true;
 				}
+
 				// 問題に不正解だった場合不正解であることを表示
 				if(!result){ System.out.println("違いますよ！"); }
 			}
