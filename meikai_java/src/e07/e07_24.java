@@ -16,9 +16,9 @@ public class e07_24 {
 	 */
 	static int[] arrayRmvOf(int[] a, int idx){
 		// 要素数の調整値を定数化
-		final int ADJUST_INT = 1;
+		final int REMOVE_NUMBER = 1;
 		// 要素a[idx]を削除した値をいれる配列を生成
-		int[] removeInt = new int[(a.length - ADJUST_INT)];
+		int[] removeInt = new int[(a.length - REMOVE_NUMBER)];
 
 		// 生成した配列にaの配列の値をコピーする
 		for(int index = 0; index < removeInt.length; index++){
@@ -29,7 +29,7 @@ public class e07_24 {
 				// インデックスが削除する要素のインデックス以上の場合
 			}else{
 				// aの配列の次のインデックスの値を新しい配列にいれる
-				removeInt[index] = a[index + ADJUST_INT];
+				removeInt[index] = a[index + REMOVE_NUMBER];
 			}
 		}
 		// 生成した配列を返却する
