@@ -22,7 +22,7 @@ public class e07_18 {
 		for(int index = idx; index < (a.length - ADJUST_INT); index++){
 			// 書き換えるインデックスの次のインデックスを求める
 			int nextIndex = index + ADJUST_INT;
-			// ひとつ前の要素を次の要素で書き換える
+			// a配列のインデックス値の要素を次のインデックス値の要素で書き換える
 			a[index] = a[nextIndex];
 		}
 	}
@@ -40,7 +40,7 @@ public class e07_18 {
 		for(int index = 0; index < number; index++){
 			// 要素の値の入力を促す
 			System.out.print("x[" + index + "] = ");
-			// 入力値を配列aの要素に代入
+			// 入力値を配列xの要素に代入
 			x[index] = stdIn.nextInt();
 		}
 
