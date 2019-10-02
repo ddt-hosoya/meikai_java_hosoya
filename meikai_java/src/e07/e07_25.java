@@ -38,11 +38,9 @@ public class e07_25 {
 				// aの値を新しい配列の同じインデックスにいれる
 				removeIntN[index] = a[index];
 			// インデックスが削除する要素のインデックス以上の場合
-			}else{
-				if(index + n <= a.length - ADJUST_INT){
-					// aの配列の次のインデックスの値を新しい配列にいれる
-					removeIntN[index] = a[index + n];
-				}
+			}else if(index + n <= a.length - ADJUST_INT){
+				// aの配列の次のインデックスの値を新しい配列にいれる
+				removeIntN[index] = a[index + n];
 			}
 		}
 		// 生成した配列を返却する
