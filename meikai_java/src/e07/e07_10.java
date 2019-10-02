@@ -1,0 +1,103 @@
+package e07;
+/*
+List7-11を拡張して、以下４つの問題をランダムに出題するプログラムを作成せよ。
+ */
+import java.util.Random;
+import java.util.Scanner;
+
+public class e07_10 {
+	// 入力機能を実体化
+	static Scanner stdIn = new Scanner(System.in);
+	/**
+	 *  続行の確認をおこなうメソッド
+	 * @author t.hosoya
+	 * @since 20190613
+	 * @return boolean 続行するか否か
+	 *
+	 */
+	static boolean confirmRetry(){
+		// 続行するかどうかをいれる変数
+		int cont;
+		do{
+			// ユーザに対して続行するかどうか尋ねる
+			System.out.print("もう一度？＜ Yes…1 / No…0＞：");
+			// 入力値を変数にいれる
+			cont = stdIn.nextInt();
+		// 0か1以外が入力された場合、もう一度入力をもとめる
+		}while(cont != 0 && cont != 1);
+		// 続行する場合はtrueを、続行しない場合はfalseを返却する
+		return cont == 1;
+	}
+	// mainメソッド
+	public static void main(String[] args){
+		// 乱数生成機能を実体化
+		Random rand = new Random();
+		// 説明を表示
+		System.out.println("暗算力トレーニング！！");
+		do{
+			// 3桁の乱数を生成
+			int x = rand.nextInt(900) + 100;
+			// 3桁の乱数を生成
+			int y = rand.nextInt(900) + 100;
+			// 3桁の乱数を生成
+			int z = rand.nextInt(900) + 100;
+			// 4つの問題のうちどの問題を出題するかを決定する乱数
+			int question = rand.nextInt(4);
+
+			// 表示する問題文
+			String questionSentence = "";
+			// 正解
+			int correctAnswer = 0;
+			//どの問題を出題するか判定
+			switch(question){
+				case 0:
+					// 表示する問題文をつくる
+					questionSentence = x + " + " + y + " + " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x + y + z;
+					// switch文から抜ける
+					break;
+				case 1:
+					// 表示する問題文をつくる
+					questionSentence = x + " + " + y + " - " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x + y - z;
+					// switch文から抜ける
+					break;
+				case 2:
+					// 表示する問題文をつくる
+					questionSentence = x + " - " + y + " + " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x - y + z;
+					// switch文から抜ける
+					break;
+				case 3:
+					// 表示する問題文をつくる
+					questionSentence = x + " - " + y + " - " + z + " = ";
+					// 正解を設定する
+					correctAnswer = x - y - z;
+					// switch文から抜ける
+					break;
+			}
+
+			// 正否を入れる変数
+			boolean result = false;
+			// 正解するまで繰り返す
+			while(!result){
+				// 回答を入れる変数
+				int answer;
+				// 問題文を表示
+				System.out.print(questionSentence);
+				// 入力値を回答として変数に入れる
+				answer = stdIn.nextInt();
+				if(answer == correctAnswer){
+					result = true;
+				}
+
+				// 問題に不正解だった場合不正解であることを表示
+				if(!result){ System.out.println("違いますよ！"); }
+			}
+		// 続行するかどうか確認する
+		}while(confirmRetry());
+	}
+}
