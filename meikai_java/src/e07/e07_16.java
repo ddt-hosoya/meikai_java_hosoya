@@ -23,7 +23,7 @@ public class e07_16 {
 				min = a[index];
 			}
 		}
-		// 合計値を返却する
+		// 最小値を返却する
 		return min;
 	}
 
