@@ -10,8 +10,12 @@ void printArray(int[][] a)
 import java.util.Scanner;
 
 public class e07_33 {
-
-	// int型の1次元配列の全要素の値を表示する
+	/**
+	 * int型の1次元配列の全要素の値を表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190619
+	 * @param a 表示する1次元配列
+	 */
 	static void printArray(int[] a){
 		// 全要素数分繰り返す
 		for(int index = 0; index < a.length; index++){
@@ -21,7 +25,12 @@ public class e07_33 {
 		// 改行する
 		System.out.println();
 	}
-	// int型の2次元配列の全要素の値を表示する
+	/**
+	 * int型の2次元配列の全要素の値を表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190619
+	 * @param a 表示する2次元配列
+	 */
 	static void printArray(int[][] a){
 		// aの行列の中で一番列数が多い列数を求める
 		int maxColumn = 1;
