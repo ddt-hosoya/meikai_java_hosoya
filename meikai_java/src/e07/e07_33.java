@@ -24,17 +24,17 @@ public class e07_33 {
 	// int型の2次元配列の全要素の値を表示する
 	static void printArray(int[][] a){
 		// aの行列の中で一番列数が多い列数を求める
-		int max = 1;
+		int maxColumn = 1;
 		// 全行
 		for(int line = 0; line < a.length; line++){
 			// 列数が最大列数より大きければ
-			if(max < a[line].length){
+			if(maxColumn < a[line].length){
 				// その列数を最大列数とする
-				max = a[line].length;
+				maxColumn = a[line].length;
 			}
 		}
 		// 最大文字数を格納する配列を生成
-		int[] charNum = new int[max];
+		int[] charNum = new int[maxColumn];
 
 		// 各要素の桁数を調べる
 		// 全行
@@ -42,28 +42,28 @@ public class e07_33 {
 			// 全列
 			for(int column = 0; column < a[line].length; column++){
 				// 何桁か数える
-				int count = 0;
+				int countDigit = 0;
 				// 要素の値が0ならば
 				if(a[line][column] == 0){
 					// 桁数は1である
-					count = 1;
+					countDigit = 1;
 				// 要素の値が1以外ならば
 				}else{
 					// 10で割った商が0になるまで繰り返し、繰り返した回数を桁数とする
-					for(int number = a[line][column]; number != 0; count++){
+					for(int number = a[line][column]; number != 0; countDigit++){
 						// 10で割る
 						number = number / 10;
 					}
 					// マイナスの値の場合は符号分桁数をプラスする
 					if(a[line][column] < 0){
 						// インクリメント
-						count++;
+						countDigit++;
 					}
 				}
 				// 桁数がその列の値の中でより大きい場合
-				if(charNum[column] < count){
+				if(charNum[column] < countDigit){
 					// 最大文字数を格納する配列にいれる
-					charNum[column] = count;
+					charNum[column] = countDigit;
 				}
 			}
 		}
