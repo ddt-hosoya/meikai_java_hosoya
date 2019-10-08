@@ -4,6 +4,12 @@ package e08;
 たとえば：タンク容量を表すフィールドを追加する/ナンバーを表すフィールドを追加する/
 燃費を表すフィールドを追加する/移動による燃料残量の計算に燃費を反映させる/給油のためのメソッドを追加するetc…
  */
+/**
+ * 自動車クラス
+ * @author t.hosoya
+ * @since 20190620
+ *
+ */
 public class e08_02 {
 	private String name;
 	private int width;
@@ -34,13 +40,33 @@ public class e08_02 {
 		x = y = 0.0;
 	}
 
-	// xの座標を返すメソッド
+	/**
+	 * xの座標を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190620
+	 * @return double xの座標
+	 */
 	double getX(){ return x; }
-	// y座標を返すメソッド
+	/**
+	 * yの座標を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190620
+	 * @return double yの座標
+	 */
 	double getY(){ return y; }
-	// 残り燃料を返すメソッド
+	/**
+	 * 残り燃料を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190620
+	 * @return double 残り燃料
+	 */
 	double getFuel(){ return fuel; }
 
+	/**
+	 * 車のスペックを表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190620
+	 */
 	void putSpec(){
 		// 名前を表示
 		System.out.println("名前：" + name);
@@ -57,6 +83,14 @@ public class e08_02 {
 
 	}
 
+	/**
+	 * 残り燃料を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190620
+	 * @param dx x方向に移動する距離
+	 * @param dy y方向に移動する距離
+	 * @return boolean 移動したかどうか
+	 */
 	boolean move(double dx, double dy){
 		// 移動距離
 		double dist = Math.sqrt(dx * dx + dy * dy);
@@ -79,8 +113,12 @@ public class e08_02 {
 			return true;
 		}
 	}
-
-	// 給油メソッド
+	/**
+	 * 給油メソッド
+	 * @author t.hosoya
+	 * @since 20190620
+	 * @param refuel 給油量
+	 */
 	void refueling(double refuel){
 		// 燃料タンクの空き容量
 		double capacity = tankSize - fuel;
