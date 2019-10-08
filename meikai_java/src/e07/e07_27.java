@@ -62,20 +62,40 @@ public class e07_27 {
 		// 配列b
 		int[][] b = {{6,3,4},{5,1,2}};
 		// 配列c
-		int[][] c = new int[3][3];
+		int[][] c = new int[2][3];
+		// 配列d
+		int[][] d = {{9,11,13},{20,18,16,14}};
 
+		//trueパターンの検証
+		System.out.println("★trueパターンの検証★");
 		// 行列aとbの和をcに代入
 		boolean result = addMatrix(a, b, c);
-
 		// 行列aの全要素を表示
 		System.out.println("行列a"); printMatrix(a);
 		// 行列bの全要素を表示
 		System.out.println("行列b"); printMatrix(b);
-		// 加算処理が完了していればcの全要素を表示
+		// addMatrixメソッドの返り値がtrueならば加算処理後の行列を表示し、falseならば加算処理行わなかった主旨文言を表示
 		if(result){
 			// 行列cの全要素を表示
 			System.out.println("行列c"); printMatrix(c);
+		}else{
+			System.out.println("行数または列数が同一で無いため加算処理を行いませんでした。");
+		}
+
+		//falseパターンの検証
+		System.out.println("★falseパターンの検証★");
+		// 行列aとdの和をcに代入
+		boolean resultFalse = addMatrix(a, d, c);
+		// 行列aの全要素を表示
+		System.out.println("行列a"); printMatrix(a);
+		// 行列dの全要素を表示
+		System.out.println("行列d"); printMatrix(d);
+		// addMatrixメソッドの返り値がtrueならば加算処理後の行列を表示し、falseならば加算処理行わなかった主旨文言を表示
+		if(resultFalse){
+			// 行列cの全要素を表示
+			System.out.println("行列c"); printMatrix(c);
+		}else{
+			System.out.println("行数または列数が同一で無いため加算処理を行いませんでした。");
 		}
 	}
-
 }
