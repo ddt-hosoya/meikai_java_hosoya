@@ -10,28 +10,52 @@ double absolute(double x)
 import java.util.Scanner;
 
 public class e07_31 {
-	// int型整数のxの絶対値を求める
+	/**
+	 * int型整数のxの絶対値を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param x int型整数x
+	 * @return int xの絶対値
+	 */
 	static int absolute(int x){
 		// 負の値の場合符号を反転する
 		if(x < 0){ x = -x; }
 		// 絶対値を返す
 		return x;
 	}
-	// long型整数のxの絶対値を求める
+	/**
+	 * long型整数のxの絶対値を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param x long型整数x
+	 * @return long xの絶対値
+	 */
 	static long absolute(long x){
 		// 負の値の場合符号を反転する
 		if(x < 0){ x = -x; }
 		// 絶対値を返す
 		return x;
 	}
-	// float型実数のxの絶対値を求める
+	/**
+	 * float型実数のxの絶対値を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param x float型実数x
+	 * @return float xの絶対値
+	 */
 	static float absolute(float x){
 		// 負の値の場合符号を反転する
 		if(x < 0){ x = -x; }
 		// 絶対値を返す
 		return x;
 	}
-	// double型実数のxの絶対値を求める
+	/**
+	 * double型実数のxの絶対値を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param x double型実数x
+	 * @return double xの絶対値
+	 */
 	static double absolute(double x){
 		// 負の値の場合符号を反転する
 		if(x < 0){ x = -x; }
