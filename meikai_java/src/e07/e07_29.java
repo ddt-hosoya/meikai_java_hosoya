@@ -3,6 +3,13 @@ package e07;
 2次元配列aと同じ配列(要素数が同じで、すべての要素の値が同じ配列)を生成して返却するメソッドaryClone2を作成せよ。
  */
 public class e07_29 {
+	/**
+	 * 2次元配列aと同じ配列(要素数が同じで、すべての要素の値が同じ配列)を生成して返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param a 2次元配列a
+	 * @return int[][] 2次元配列aと要素数が同じで、すべての要素の値が同じ配列
+	 */
 	static int[][] aryClone2(int[][] a){
 		// 2次元配列を生成する
 		int[][] cloneMatrix = new int[a.length][];
@@ -19,7 +26,12 @@ public class e07_29 {
 		// 行列aと同じ2次元配列を返す
 		return cloneMatrix;
 	}
-	// 行列mの全要素を表示
+	/**
+	 * 行列mの全要素を表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param m 表示する行列m
+	 */
 	static void printMatrix(int[][] m){
 		// 全行数分繰り返す
 		for(int line = 0; line < m.length; line++){
