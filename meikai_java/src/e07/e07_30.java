@@ -9,12 +9,27 @@ int min(int[] a)
 import java.util.Scanner;
 
 public class e07_30 {
-	// 二つのint型整数a,bの最小値
+	/**
+	 * 二つのint型整数a,bの最小値を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param a int型整数値a
+	 * @param b int型整数値b
+	 * @return int 最小値
+	 */
 	static int min(int a, int b){
 		// 二つの値を比較して小さいほうを返す
 		return a < b ? a : b;
 	}
-	// 三つのint型整数a,b,cの最小値
+	/**
+	 * 三つのint型整数a,b,cの最小値を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param a int型整数値a
+	 * @param b int型整数値b
+	 * @param c int型整数値c
+	 * @return int 最小値
+	 */
 	static int min(int a, int b, int c){
 		// aの値を仮に最小値とする
 		int min = a;
@@ -25,7 +40,13 @@ public class e07_30 {
 		// 最小値を返す
 		return min;
 	}
-	// 配列aの要素の最小値
+	/**
+	 * 配列aの要素の最小値を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190618
+	 * @param a 配列a
+	 * @return int 最小値
+	 */
 	static int min(int[] a){
 		// 配列aの一つ目の要素を仮に最小値とする
 		int min = a[0];
