@@ -11,7 +11,12 @@ void printBits(long x)
 import java.util.Scanner;
 
 public class e07_32 {
-	// byte型整数値の内部ビットを表示
+	/**
+	 * byte型整数値の内部ビットを表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190619
+	 * @param x 表示するbyte型整数値
+	 */
 	static void printBits(byte x){
 		// byte型の内部ビットは8ビットで表現されているため8ビット分繰り返す
 		for(int i = 7; i >= 0; i--){
@@ -20,7 +25,12 @@ public class e07_32 {
 		}
 		System.out.println();
 	}
-	// short型整数値の内部ビットを表示
+	/**
+	 * short型整数値の内部ビットを表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190619
+	 * @param x 表示するshort型整数値
+	 */
 	static void printBits(short x){
 		// short型の内部ビットは16ビットで表現されているため16ビット分繰り返す
 		for(int i = 15; i >= 0; i--){
@@ -29,7 +39,12 @@ public class e07_32 {
 		}
 		System.out.println();
 	}
-	// int型整数値の内部ビットを表示
+	/**
+	 * int型整数値の内部ビットを表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190619
+	 * @param x 表示するint型整数値
+	 */
 	static void printBits(int x){
 		// int型の内部ビットは32ビットで表現されているため32ビット分繰り返す
 		for(int i = 31; i >= 0; i--){
@@ -38,7 +53,12 @@ public class e07_32 {
 		}
 		System.out.println();
 	}
-	// long型整数値の内部ビットを表示
+	/**
+	 * long型整数値の内部ビットを表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190619
+	 * @param x 表示するlong型整数値
+	 */
 	static void printBits(long x){
 		// byte型の内部ビットは64ビットで表現されているため64ビット分繰り返す
 		for(int i = 63; i >= 0; i--){
