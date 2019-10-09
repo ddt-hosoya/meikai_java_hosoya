@@ -33,7 +33,7 @@ public class e07_18 {
 		System.out.print("要素数：");
 		// 入力値を要素数として変数に代入
 		int number = stdIn.nextInt();
-		// 配列aを生成する
+		// 配列xを生成する
 		int[] x = new int[number];
 
 		// 要素数分処理を繰り返す
