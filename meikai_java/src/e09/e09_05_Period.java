@@ -2,7 +2,12 @@ package e09;
 /*
 開始日と終了日とから構成される《期間》を表すクラスPeriodを作成せよ。フィールドは以下のようになる。
  */
-// 期間クラス
+/**
+ * 期間クラス
+ * @author t.hosoya
+ * @since 20190624
+ *
+ */
 public class e09_05_Period {
 	// 開始日
 	private e09_05_Day from;
@@ -17,29 +22,55 @@ public class e09_05_Period {
 		this.to= to;
 	}
 
-	// 開始日の日付を返すメソッド
+	/**
+	 *  開始日の日付を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 日付を年月日(曜日)の形式にした文字列
+	 */
 	public String getFrom(){
 		// 文字列で返す
 		return toString(from);
 	}
-	// 終了日の日付を返すメソッド
+	/**
+	 *  終了日の日付を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 日付を年月日(曜日)の形式にした文字列
+	 */
 	public String getTo(){
 		// 文字列で返す
 		return toString(to);
 	}
 
-	// 開始日を更新するメソッド
+	/**
+	 *  開始日を更新するメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param inputfrom 開始日
+	 */
 	public void setFrom(e09_05_Day inputfrom){
 		// 日付クラスの変数を受け取り開始日にいれる
 		from = inputfrom;
 	}
-	// 終了日を更新するメソッド
+	/**
+	 *  終了日を更新するメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param 終了日
+	 */
 	public void setTo(e09_05_Day inputto){
 		// 日付クラスの変数を受け取り終了日にいれる
 		to = inputto;
 	}
 
-	// 日付を受け取り、その日付が期間内かどうかを判定するメソッド
+	/**
+	 *  日付を受け取り、その日付が期間内かどうかを判定するメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param inputDay 日付
+	 * @return boolean 日付が期間内かどうか
+	 */
 	public boolean isInPriod(e09_05_Day inputDay){
 		// 入力年が開始年より小さいか、終了年より大きい場合
 		if(inputDay.getYear() < from.getYear() || inputDay.getYear() > to.getYear()){
@@ -72,7 +103,13 @@ public class e09_05_Period {
 		return true;
 	}
 
-	// 日付を文字列で返すメソッド
+	/**
+	 * 日付を文字列で返すメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param day 日付
+	 * @return String 日付を年月日(曜日)の形式にした文字列
+	 */
 	public String toString(e09_05_Day day){
 		// 曜日の配列
 		String[] wd = {"日", "月", "火", "水", "木", "金", "土"};
