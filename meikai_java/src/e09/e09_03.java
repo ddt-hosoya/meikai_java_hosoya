@@ -4,7 +4,11 @@ package e09;
 ※コンストラクタを変更したり口座開設日のゲッタ(口座開設日フィールドが参照する日付インスタンスのコピーを返す)
 などのメソッドを追加したりすること。
  */
-// 銀行口座クラス
+/**
+ * 銀行口座クラス(第2版)+α
+ * @author t.hosoya
+ * @since 20190624
+ */
 public class e09_03 {
 	private String name;
 	private String no;
@@ -18,33 +22,67 @@ public class e09_03 {
 		this.balance = balance;
 		this.openDay = new e09_03_Day(openDay);
 	}
-
-	// 口座名義を調べる
+	/**
+	 * 口座名義を調べるメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 口座名義
+	 */
 	public String getName(){
 		return name;
 	}
-	// 口座番号を調べる
+	/**
+	 * 口座番号を調べるメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 口座番号
+	 */
 	public String getNo(){
 		return no;
 	}
-	// 貯金残高を調べる
+	/**
+	 * 貯金残高を調べるメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return long 貯金残高
+	 */
 	public long getBalance(){
 		return balance;
 	}
-	// 口座開設日を調べる
+	/**
+	 * 口座開設日を調べるメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 口座開設日
+	 */
 	public String getOpenDay(){
 		openDay = new e09_03_Day(openDay);
 		return toString();
 	}
-	// k円預ける
+	/**
+	 * k円預けるメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param k 預ける金額
+	 */
 	public void deposit(long k){
 		balance += k;
 	}
-	// k円おろす
+	/**
+	 * k円おろすメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param k おろす金額
+	 */
 	public void withdraw(long k){
 		balance -= k;
 	}
-	// 文字列表現を返却
+	/**
+	 * 文字列表現を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 日付を年月日(曜日)で表した文字列
+	 */
 	public String toString(){
 		// 曜日の配列
 		String[] wd = {"日", "月", "火", "水", "木", "金", "土"};
