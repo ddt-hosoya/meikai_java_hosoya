@@ -3,6 +3,12 @@ package e09;
 演習8－1で作成した《人間クラス》に、誕生日のフィールドとtoStringメソッドを追加せよ。
 ※コンストラクタを変更したり、誕生日のゲッタなどのメソッドを追加したりすること。
  */
+/**
+ * 人間クラス+α
+ * @author t.hosoya
+ * @since 20190624
+ *
+ */
 public class e09_04 {
 	// 名前
 	private String name;
@@ -33,7 +39,11 @@ public class e09_04 {
 		this.birthday = new e09_04_Day(birthday);
 	}
 
-	// 人間のスペックを表示するメソッド
+	/**
+	 * 人間のスペックを表示するメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 */
 	void putSpec(){
 		// 名前を表示
 		System.out.printf("名前：%s\n", name);
@@ -47,20 +57,36 @@ public class e09_04 {
 		System.out.printf("誕生日：%s\n", toString());
 	}
 
-	// 誕生日のゲッタ
+	/**
+	 * 誕生日ゲッタ
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 誕生日文字列
+	 */
 	String getBirthday(){
 		// 誕生日文字列を返す
 		return toString();
 	}
 
-	// 標準体重を返すメソッド
+	/**
+	 * 標準体重を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return double 標準体重
+	 */
 	double putStandardWeight(){
 		// 標準体重 = 身長(m)ｘ身長(m)ｘ22
 		double standardWeight = (height / ADJUST) * (height / ADJUST) * EXPONENT;
 		return standardWeight;
 	}
 
-	// 身長を更新して前回との差分を返すメソッド
+	/**
+	 * 身長を更新して前回との差分を返すメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param newHeight 最新の身長
+	 * @return int 前回の身長との差分
+	 */
 	int updateHeight(int newHeight){
 		// 前回との差分を求める
 		int difference = newHeight - height;
@@ -70,7 +96,13 @@ public class e09_04 {
 		return difference;
 	}
 
-	// 体重を更新
+	/**
+	 * 体重を更新するメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @param newHeight 最新の体重
+	 * @return int 前回の体重との差分
+	 */
 	int updateWeight(int newWeight){
 		// 前回との差分を求める
 		int difference = newWeight - weight;
@@ -80,7 +112,12 @@ public class e09_04 {
 		return difference;
 	}
 
-	// 日付を文字列で返すメソッド
+	/**
+	 * 日付を文字列で返すメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 日付を年月日（曜日）の形式にした文字列
+	 */
 	public String toString(){
 		// 曜日の配列
 		String[] wd = {"日", "月", "火", "水", "木", "金", "土"};
