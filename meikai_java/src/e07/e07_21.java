@@ -17,18 +17,18 @@ public class e07_21 {
 	 */
 	static void aryExchng(int[] a, int[] b){
 		// 交換する要素のかず
-		int valueLength;
+		int exchangeLength;
 		// aの要素数がbの要素数以下の場合
 		if(a.length <= b.length) {
 			// 交換する要素数はaの要素数とする
-			valueLength = a.length;
+			exchangeLength = a.length;
 		// bの要素数がaの要素数より小さい場合
 		} else {
 			// 交換する要素数はbの要素数とする
-			valueLength = b.length;
+			exchangeLength = b.length;
 		}
 		// 小さいほうの要素数分交換処理を繰り返す
-		for(int index = 0; index < valueLength; index++){
+		for(int index = 0; index < exchangeLength; index++){
 		// aの値を仮の変数にいれておく
 			int save = a[index];
 			// bの値をaにいれる
