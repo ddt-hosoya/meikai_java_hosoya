@@ -24,7 +24,11 @@ import java.util.GregorianCalendar;
 ・n日前の日付を返却するメソッド
 etc...
  */
-
+/**
+ * 日付クラス第4版_改訂
+ * @author t.hosoya
+ * @since 20190626
+ */
 public class e10_04_Day {
 	// インスタンス変数
 	private int year = 1;
@@ -44,11 +48,22 @@ public class e10_04_Day {
 		staticD = today.get(DATE);
 	}
 
-	//y年は閏年か判定するクラスメソッド
+	/**
+	 * y年は閏年か判定するクラスメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param y 年（西暦）
+	 * @return boolean 閏年か否か
+	 */
 	public static boolean isLeap(int y){
 		return y % 4 == 0 && y % 100 != 0 || y % 100 == 0;
 	}
-	// 月の最終日を返すクラスメソッド
+	/**
+	 * 月の最終日を返すクラスメソッド
+	 * @param year 年
+	 * @param month 月
+	 * @return int 月の最終日
+	 */
 	public static int lastDayOfMonth(int year, int month){
 		// 最終日をいれる変数
 		int lastDay;
@@ -75,7 +90,14 @@ public class e10_04_Day {
 		// 最終日を返す
 		return lastDay;
 	}
-	// 二つの日付の前後関係を判定するクラスメソッド
+	/**
+	 * 二つの日付の前後関係を判定するクラスメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param oneDay 日付
+	 * @param anotherDay 日付
+	 * @return int 前後関係の判定結果
+	 */
 	public static int  beforeAndAfter(e10_04_Day oneDay, e10_04_Day anotherDay){
 		// anotherDayがより前の日付ならば-1／同じ日付ならば0／より後ろの日付ならば1を返す
 		int answer = 0;
@@ -149,33 +171,93 @@ public class e10_04_Day {
 		this(day.year, day.month, day.date);
 	}
 
-	// 年のゲッタ
-	public int getYear() { return year; }
-	// 月のゲッタ
-	public int getMonth() { return month; }
-	// 日のゲッタ
-	public int getDate() { return date; }
+	/**
+	 *  年のゲッタ
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return int 年
+	 */
+	public int getYear() {
+		return year;
+	}
+	/**
+	 *  月のゲッタ
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return int 月
+	 */
+	public int getMonth() {
+		return month;
+	}
 
-	// 年のセッタ
-	public void setYear(int year) { this.year = year; }
-	// 月のセッタ
-	public void setMonth(int month) { this.month = month; }
-	// 日のセッタ
-	public void setDate(int date) { this.date = date; }
+	/**
+	 *  日のゲッタ
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return int 日
+	 */
+	public int getDate() {
+		return date;
+	}
 
-	// 年月日のセッタ
+	/**
+	 *  年のセッタ
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param int 年
+	 */
+	public void setYear(int year) {
+		this.year = year;
+	}
+	/**
+	 *  月のセッタ
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param int 月
+	 */
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	/**
+	 *  日のセッタ
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param int 日
+	 */
+	public void setDate(int date) {
+		this.date = date;
+	}
+
+	/**
+	 *  年月日のセッタ
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param year 年
+	 * @param month 月
+	 * @param date 日
+	 */
 	public void set(int year, int month, int date){
 		this.year = year;
 		this.month = month;
 		this.date = date;
 	}
 
-	// 閏年か判定するインスタンスメソッド
+	/**
+	 *  閏年か判定するインスタンスメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return boolean 閏年か否か
+	 */
 	public boolean isLeap(){
 		return isLeap(year);
 	}
 
-	// 曜日を求める
+	/**
+	 *  曜日を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return int 曜日
+	 */
 	public int dayOfWeek(){
 		int y = year;
 		int m = month;
@@ -185,13 +267,23 @@ public class e10_04_Day {
 		}
 		return(y + y / 4 - y / 100 + y / 400 + (13 * m + 8) / 5 + date) % 7;
 	}
-	// 日付dと等しいか
+	/**
+	 * 日付dと等しいか
+	 * @author t.hosoya
+	 * @param d 日付
+	 * @return boolean 日付dと一致しているか否か
+	 */
 	public boolean equalTo(e10_04_Day d){
 		// 年、月、日が一致していればtrueを返す
 		return year == d.year && month == d.month && date == d.date;
 	}
 
-	// 文字列表現を返却
+	/**
+	 * 文字列表現を返却
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return string 年月日(曜日)形式の日付
+	 */
 	public String toString(){
 		// 曜日配列
 		String[] wd = {"日","月","火","水","木","金","土"};
@@ -199,7 +291,12 @@ public class e10_04_Day {
 		return String.format("%04d年%02d月%02d日(%s)", year, month, date, wd[dayOfWeek()]);
 	}
 
-	// 年内での経過日数を求めるメソッド
+	/**
+	 * 年内での経過日数を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return int 経過日数
+	 */
 	public int passedDay(){
 		// 経過日数を入れる変数を初期化
 		int passedDayNum = 0;
@@ -213,7 +310,12 @@ public class e10_04_Day {
 		// 経過日数を返す
 		return passedDayNum;
 	}
-	// 年内の残り日数を求めるメソッド
+	/**
+	 * 年内の残り日数を求めるメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return int 年内の残り日数
+	 */
 	public int restDay(){
 		// 残り日数を入れる変数
 		int restDayNum;
@@ -227,7 +329,13 @@ public class e10_04_Day {
 		return restDayNum;
 	}
 
-	// ほかの日付との前後関係（より前の日付か／同じ日付か／より後ろの日付か）を判定するインスタンスメソッド
+	/**
+	 * ほかの日付との前後関係（より前の日付か／同じ日付か／より後ろの日付か）を判定するインスタンスメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param anotherDay 日付
+	 * @return int 前後関係の判定結果
+	 */
 	public int beforeAndAfter(e10_04_Day anotherDay){
 		// 自身の持つフィールドでインスタンスを生成
 		e10_04_Day oneDay = new e10_04_Day(year, month, date);
@@ -238,8 +346,11 @@ public class e10_04_Day {
 		return answer;
 	}
 
-
-	// 日付を一つ後ろに進めるメソッド
+	/**
+	 * 日付を一つ後ろに進めるメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 */
 	public void setTommorow(){
 		// 次の日を設定するインスタンスを生成
 		e10_04_Day tommorow = getTommorow();
@@ -251,7 +362,12 @@ public class e10_04_Day {
 		setDate(tommorow.date);
 	}
 
-	// 次の日の日付を返却するメソッド
+	/**
+	 * 次の日の日付を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return e10_04_Day 次の日の日付
+	 */
 	public e10_04_Day getTommorow(){
 		// 次の日を設定するインスタンスを生成
 		e10_04_Day tommorow = new e10_04_Day(year, month, date);
@@ -286,7 +402,11 @@ public class e10_04_Day {
 		return tommorow;
 	}
 
-	// 日付をひとつ前に戻すメソッド
+	/**
+	 * 日付をひとつ前に戻すメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 */
 	public void setYesterday(){
 		// 前日を設定するインスタンスを生成
 		e10_04_Day yesterday = getYesterday();
@@ -298,7 +418,12 @@ public class e10_04_Day {
 		setDate(yesterday.date);
 	}
 
-	// 前日の日付を返却するメソッド
+	/**
+	 * 前日の日付を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @return e10_04_Day 前日の日付
+	 */
 	public e10_04_Day getYesterday(){
 		// 前日を設定するインスタンスを生成
 		e10_04_Day yesterday = new e10_04_Day(year, month, date);
@@ -336,7 +461,12 @@ public class e10_04_Day {
 		// 前日の日付を返却
 		return yesterday;
 	}
-	// 日付をn日後ろに進めるメソッド
+	/**
+	 * 日付をn日後ろに進めるメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param n 後ろに進める日数
+	 */
 	public void setForwardN(int n){
 		e10_04_Day forwardDay = getForwardN(n);
 		// n日後ろの年を設定
@@ -346,7 +476,13 @@ public class e10_04_Day {
 		// n日後ろの日を設定
 		setDate(forwardDay.date);
 	}
-	// n日後の日付を返却するメソッド
+	/**
+	 * n日後の日付を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param n 何日後
+	 * @return e10_04_Day n日後の日付
+	 */
 	public e10_04_Day getForwardN(int n){
 		// n日後の日付をいれるクラス型変数を生成
 		e10_04_Day forwardDay = new e10_04_Day(year, month, date);
@@ -358,18 +494,29 @@ public class e10_04_Day {
 		// n日後の日付を返却
 		return forwardDay;
 	}
-	// 日付をn日前に戻すメソッド
+	/**
+	 * 日付をn日前に戻すメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param n 前に戻す日数
+	 */
 	public void setBackN(int n){
 		e10_04_Day backDay = getBackN(n);
-		// n日後ろの年を設定
+		// n日前の年を設定
 		setYear(backDay.year);
-		// n日後ろの月を設定
+		// n日前の月を設定
 		setMonth(backDay.month);
-		// n日後ろの日を設定
+		// n日前の日を設定
 		setDate(backDay.date);
 	}
 
-	// n日前の日付を返却するメソッド
+	/**
+	 * n日前の日付を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190626
+	 * @param n 何日前
+	 * @return e10_04_Day n日前の日付
+	 */
 	public e10_04_Day getBackN(int n){
 		// n日前の日付を入れるクラス型変数を生成
 		e10_04_Day backDay = new e10_04_Day(year, month, date);
