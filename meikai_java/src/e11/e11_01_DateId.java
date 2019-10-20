@@ -1,11 +1,16 @@
 package e11;
+import static java.util.Calendar.*;
+
 /*
 List10-12(p.356)のクラスDateIdをパッケージidに所属させるように書き換えよ。
 なお、クラスDateIdTesterは無名パッケージに所属させること。
  */
 import java.util.GregorianCalendar;
-import static java.util.GregorianCalendar.*;
-
+/**
+ * DateIdクラス
+ * @author t.hosoya
+ * @since 20190627
+ */
 public class e11_01_DateId {
 	// 何番までの識別番号を与えたか
 	private static int counter;
@@ -32,7 +37,12 @@ public class e11_01_DateId {
 		id = ++counter;
 	}
 
-	// 識別番号を取得
+	/**
+	 * 識別番号を取得するメソッド
+	 * @author t.hosoya
+	 * @since 20190627
+	 * @return int 識別番号
+	 */
 	public int getId(){
 		// 識別番号を返す
 		return id;

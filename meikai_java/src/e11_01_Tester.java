@@ -1,6 +1,11 @@
 
 import e11.e11_01_DateId;
-// DateIdクラステスト用
+/**
+ *  DateIdクラステスト用
+ * @author t.hosoya
+ * @since 20190627
+ *
+ */
 public class e11_01_Tester {
 	public static void main(String[] args){
 		// DateIdクラスaを実体化
