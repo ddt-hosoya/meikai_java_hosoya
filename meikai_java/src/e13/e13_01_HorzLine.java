@@ -1,17 +1,28 @@
 package e13;
-/*
-クラスHorzLineは水平直線を表すクラスです
-このクラスは、直線を表すクラスAbstLineから派生したクラスです
+/**
+ *クラスHorzLineは水平直線を表すクラスです
+ *このクラスは、直線を表すクラスAbstLineから派生したクラスです
+ *@author t.hosoya
+ *@since 20190701
  */
 public class e13_01_HorzLine extends e13_01_AbstLine {
 	// 水平直線を生成するコンストラクタ
 	public e13_01_HorzLine(int length){ super(length); }
 
-	// メソッドtoStringは、水平直線に関する図形情報を表す文字列を返却します
+	/**
+	 * メソッドtoStringは、水平直線に関する図形情報を表す文字列を返却します
+	 * @author t.hosoya
+	 * @since 20190701
+	 * @return 水平直線に関する図形情報を表す文字列
+	 */
 	public String toString(){
 		return "HorzLine(length:" + getLength() + ")";
 	}
-	// メソッドdrawは水平直線を描画します
+	/**
+	 * メソッドdrawは水平直線を描画します
+	 * @author t.hosoya
+	 * @since 20190701
+	 */
 	public void draw(){
 		// 長さの分だけ描画を繰り返す
 		for(int i = 1; i <= getLength(); i++){

@@ -1,17 +1,28 @@
 package e13;
-/*
-クラスVertLineは垂直直線を表すクラスです。
-このクラスは、直線を表す抽象クラスAbstLineから派生したクラスです
+/**
+ *クラスVertLineは垂直直線を表すクラスです。
+ *このクラスは、直線を表す抽象クラスAbstLineから派生したクラスです
+ * @author t.hosoya
+ * @since 20190701
  */
 public class e13_01_VertLine extends e13_01_AbstLine {
 	// 垂直直線を生成するコンストラクタ
 	public e13_01_VertLine(int length){ super(length); }
 
-	// メソッドtoStringは、垂直直線に関する図形情報を表す文字列を返却します
+	/**
+	 * メソッドtoStringは、垂直直線に関する図形情報を表す文字列を返却します
+	 * @author t.hosoya
+	 * @since 20190701
+	 * @return 垂直直線に関する図形情報を表す文字列
+	 */
 	public String toStriing(){
 		return "VertLine(length:" + getLength() + ")";
 	}
-	// メソッドdrawは垂直直線を描画します
+	/**
+	 * メソッドdrawは垂直直線を描画します
+	 * @author t.hosoya
+	 * @since 20190701
+	 */
 	public void draw(){
 		// 長さの分だけ描画を繰り返す
 		for(int i = 1; i <= getLength(); i++){
