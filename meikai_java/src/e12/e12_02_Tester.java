@@ -33,7 +33,14 @@ public class e12_02_Tester {
 		// 比較結果に応じて文言を表示する
 		comResult(num2, tanaka, suzuki);
 	}
-	// 比較結果に応じて文言を表示する
+	/**
+	 * 比較結果に応じて文言を表示する
+	 * @author t.hosoya
+	 * @since 20190628
+	 * @param num comBalanceメソッドの判定結果
+	 * @param a 定期預金付き銀行口座クラス型変数
+	 * @param b 定期預金付き銀行口座クラス型変数
+	 */
 	public static void comResult(int num, e12_02_Account a, e12_02_Account b){
 		// comBalanceの結果を判定する
 		switch(num){
@@ -55,7 +62,14 @@ public class e12_02_Tester {
 		}
 	}
 
-	// 定期預金付き銀行口座クラス型変数a,bの普通預金と定期預金残高の合計額を比較した結果を返却
+	/**
+	 * 定期預金付き銀行口座クラス型変数a,bの普通預金と定期預金残高の合計額を比較した結果を返却
+	 * @author t.hosoya
+	 * @since 20190628
+	 * @param a 定期預金付き銀行口座クラス型変数
+	 * @param b 定期預金付き銀行口座クラス型変数
+	 * @return 普通預金と定期預金残高の合計額を比較した結果
+	 */
 	public static int comBalance(e12_02_Account a, e12_02_Account b){
 		// 返り値を定数化
 		// aの合計額のほうが大きい場合
