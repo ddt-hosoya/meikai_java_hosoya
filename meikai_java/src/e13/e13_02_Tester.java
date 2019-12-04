@@ -27,31 +27,35 @@ public class e13_02_Tester {
 			System.out.print("直角の位置を選択してください（1...左下／2...左上／3...右下／4...右上）：");
 			// 入力値を直角の位置とする
 			anglePosition = stdIn.nextInt();
-		}while(anglePosition < ADJUST_INT && anglePosition > SHAPE_TYPE );
+		}while(anglePosition < ADJUST_INT || anglePosition > SHAPE_TYPE );
 
-		e13_01_Shape shape[] = new e13_01_Shape[SHAPE_TYPE - ADJUST_INT];
+		// 直角の位置を配列の引数に渡すために調整した変数
+		int displayAnglePosition = anglePosition - ADJUST_INT;
+
+		// 図形クラスをインスタンス化するための配列を生成
+		e13_01_Shape shape[] = new e13_01_Shape[SHAPE_TYPE];
 
 
 		// 図形クラスをインスタンス化
 		switch(anglePosition){
 			// 1左下が選択された場合
 			case 1:
-				shape[anglePosition - ADJUST_INT] = new e13_02_PositionBottomLeft(length, anglePosition);
+				shape[displayAnglePosition] = new e13_02_PositionBottomLeft(length, displayAnglePosition);
 				break;
 			// 2左上が選択された場合
 			case 2:
-				shape[anglePosition - ADJUST_INT] = new e13_02_PositionUpperLeft(length, anglePosition);
+				shape[displayAnglePosition] = new e13_02_PositionUpperLeft(length, displayAnglePosition);
 				break;
 			// 3右下が選択された場合
 			case 3:
-				shape[anglePosition - ADJUST_INT] = new e13_02_PositionBottomRight(length, anglePosition);
+				shape[displayAnglePosition] = new e13_02_PositionBottomRight(length, displayAnglePosition);
 				break;
 			// 4右上が選択された場合
 			case 4:
-				shape[anglePosition - ADJUST_INT] = new e13_02_PositionUpperRight(length, anglePosition);
+				shape[displayAnglePosition] = new e13_02_PositionUpperRight(length, displayAnglePosition);
 				break;
 		}
 		// 生成した図形を描画する
-		shape[anglePosition - ADJUST_INT].print();
+		shape[displayAnglePosition].print();
 	}
 }
