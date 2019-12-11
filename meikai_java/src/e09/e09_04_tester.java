@@ -95,5 +95,9 @@ public class e09_04_tester {
 			// 変更がない主旨を表示
 			System.out.println("前回と比較して体重に変化はありませんでした。");
 		}
+
+		//プロフィールを再表示
+		System.out.println("◆プロフィールの再表示");
+		System.out.println(myprofile.toString());
 	}
 }

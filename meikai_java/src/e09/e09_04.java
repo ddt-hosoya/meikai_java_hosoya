@@ -54,7 +54,7 @@ public class e09_04 {
 		// BMIを表示
 		System.out.printf("BMI：%5.2f\n", bmi);
 		// 誕生日を表示
-		System.out.printf("誕生日：%s\n", toString());
+		System.out.printf("誕生日：%s\n", toStringDate());
 	}
 
 	/**
@@ -65,7 +65,18 @@ public class e09_04 {
 	 */
 	String getBirthday(){
 		// 誕生日文字列を返す
-		return toString();
+		return toStringDate();
+	}
+	/**
+	 * BMIゲッタ
+	 * @author t.hosoya
+	 * @since 20191211
+	 * @return double BMI
+	 */
+	Double getBMI(){
+		// BMI値を文字列で返す
+		bmi = (weight / (height / ADJUST) / (height / ADJUST));
+		return bmi;
 	}
 
 	/**
@@ -118,13 +129,21 @@ public class e09_04 {
 	 * @since 20190624
 	 * @return String 日付を年月日（曜日）の形式にした文字列
 	 */
-	public String toString(){
+	public String toStringDate(){
 		// 曜日の配列
 		String[] wd = {"日", "月", "火", "水", "木", "金", "土"};
 		// 日付クラスの値を文字列で返す
 		return String.format("%04d年%02d月%02d日(%s)", birthday.getYear(), birthday.getMonth(),
 				birthday.getDate(), wd[birthday.dayOfWeek()]);
-
 	}
-
+	/**
+	 * プロフィールを文字列で返すメソッド
+	 * @author t.hosoya
+	 * @since 20191211
+	 * @return String プロフィール文字列
+	 */
+	public String toString(){
+		return String.format("名前:%s\n身長:%dcm\n体重:%dkg\nBMI:%5.2f\n誕生日:%s\n\n",
+				name,height,weight,getBMI(),toStringDate());
+	}
 }
