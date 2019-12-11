@@ -48,30 +48,34 @@ public class e08_02_tester {
 					")・残り燃料 " + myCar.getFuel());
 			// 移動するか尋ねる
 			System.out.print("移動しますか[ 0...No/1...Yes]：");
+			// 移動するを選択した場合終了
+			if(stdIn.nextInt() == 1){
+				// ｘの移動距離を尋ねる
+				System.out.print("X方向の移動距離：");
+				// 入力値をｘの移動距離として代入
+				double dx = stdIn.nextDouble();
+				// ｙの移動距離を尋ねる
+				System.out.print("Y方向の移動距離：");
+				// 入力値をｙの移動距離として代入
+				double dy = stdIn.nextDouble();
+
+				// 燃料不足で移動失敗した場合
+				if(!myCar.move(dx, dy)){
+					// 燃料が足りない主旨を表示し、給油するか尋ねる
+					System.out.print("燃料が足りません。給油しますか[ 0...No/1...Yes]：");
+					// 給油する場合、給油量を尋ね給油し、給油しない場合while文先頭に戻る
+					if(stdIn.nextInt() == 1){
+						// 給油量を尋ねる
+						System.out.print("給油するガソリン量は：");
+						// 入力値を給油量として代入
+						double refuel = stdIn.nextDouble();
+						// 給油する
+						myCar.refueling(refuel);
+					}
+				}
 			// 移動しないを選択した場合終了
-			if(stdIn.nextInt() == 0){ break; }
-
-			// ｘの移動距離を尋ねる
-			System.out.print("X方向の移動距離：");
-			// 入力値をｘの移動距離として代入
-			double dx = stdIn.nextDouble();
-			// ｙの移動距離を尋ねる
-			System.out.print("Y方向の移動距離：");
-			// 入力値をｙの移動距離として代入
-			double dy = stdIn.nextDouble();
-
-			// 燃料不足で移動失敗した場合
-			if(!myCar.move(dx, dy)){
-				// 燃料が足りない主旨を表示し、給油するか尋ねる
-				System.out.print("燃料が足りません。給油しますか[ 0...No/1...Yes]：");
-				// 給油しない場合while文先頭に戻る
-				if(stdIn.nextInt() == 0){ break; }
-				// 給油量を尋ねる
-				System.out.print("給油するガソリン量は：");
-				// 入力値を給油量として代入
-				double refuel = stdIn.nextDouble();
-				// 給油する
-				myCar.refueling(refuel);
+			} else {
+				break;
 			}
 		}
 	}
