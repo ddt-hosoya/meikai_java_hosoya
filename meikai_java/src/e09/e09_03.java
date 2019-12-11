@@ -57,7 +57,7 @@ public class e09_03 {
 	 */
 	public String getOpenDay(){
 		openDay = new e09_03_Day(openDay);
-		return toString();
+		return toStringDate();
 	}
 	/**
 	 * k円預けるメソッド
@@ -78,16 +78,27 @@ public class e09_03 {
 		balance -= k;
 	}
 	/**
-	 * 文字列表現を返却するメソッド
+	 * 日付の文字列表現を返却するメソッド
 	 * @author t.hosoya
 	 * @since 20190624
 	 * @return String 日付を年月日(曜日)で表した文字列
 	 */
-	public String toString(){
+	public String toStringDate(){
 		// 曜日の配列
 		String[] wd = {"日", "月", "火", "水", "木", "金", "土"};
 		// 日付を年月日(曜日)で表した文字列を返す
 		return String.format("%04d年%02d月%02d日(%s)",
 				openDay.getYear(), openDay.getMonth(), openDay.getDate(), wd[openDay.dayOfWeek()]);
+	}
+	/**
+	 * 銀行口座情報について文字列表現を返却するメソッド
+	 * @author t.hosoya
+	 * @since 20190624
+	 * @return String 銀行口座情報
+	 */
+	public String toString(){
+		// 口座情報を文字列で表現
+		return String.format("口座名義:%s\n口座番号:%s\n預金残高:%s\n口座開設日:%s\n\n",
+								name,no,balance,getOpenDay());
 	}
 }

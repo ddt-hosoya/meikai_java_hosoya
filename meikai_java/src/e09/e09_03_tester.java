@@ -10,11 +10,17 @@ public class e09_03_tester {
 
 		e09_03 adachi = new e09_03("足立幸一", "123456", 1000, adachiOpenDay);
 
+		//足立君の口座情報を表示
 		System.out.println("■足立君の口座");
-		System.out.println("　口座名義：" + adachi.getName());
-		System.out.println("　口座番号：" + adachi.getNo());
-		System.out.println("　貯金残高：" + adachi.getBalance());
-		System.out.println("　口座開設日：" + adachi.getOpenDay());
+		System.out.println(adachi.toString());
+
+		//足立君の口座情報を更新
+		adachi.deposit(50000);
+		adachi.withdraw(9200);
+
+		//足立君の口座情報をもう一度表示
+		System.out.println("■更新後の足立君の口座");
+		System.out.println(adachi.toString());
 	}
 
 }
