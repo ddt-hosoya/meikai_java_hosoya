@@ -16,21 +16,26 @@ public class e13_01_ShapeTester {
 		int shapeNumber = stdIn.nextInt();
 
 		// 図形クラスをインスタンス化するための配列を生成
-		e13_01_Shape[] p = new e13_01_Shape[shapeNumber];
-		// 調整値を定数化
+		e13_01_Shape[] shapeArray = new e13_01_Shape[shapeNumber];
+		// 0から数える配列のインデックスの調整値を定数化
 		final int ADJUST_INT = 1;
 		// 図形の数分インスタンス化を繰り返す
-		for(int num = 0; num < p.length; num++){
-			// 図形の種類をたずねる
-			System.out.print((num + ADJUST_INT) + "番の図形の種類（1...点／2...水平直線／3...垂直直線／4...長方形）：");
-			// 入力値を図形の種類とする
-			int kind = stdIn.nextInt();
+		for(int num = 0; num < shapeArray.length; num++){
+			// 図形の種類の初期値を0とする
+			int kind = 0;
+			do{
+				// 図形の種類をたずねる
+				System.out.print((num + ADJUST_INT) + "番の図形の種類（1...点／2...水平直線／3...垂直直線／4...長方形）：");
+				// 入力値を図形の種類とする
+				kind = stdIn.nextInt();
+			// 1~4以外が入力された場合再度図形の種類をたずねる
+			}while(kind <= 0 || kind > 4);
 			// 入力した値によってどの図形のインスタンスを生成するか決まる
 			switch(kind){
 				// 1を入力した場合
 				case 1:
 					// num個目の配列に点クラスのインスタンスを生成する
-					p[num] = new e13_01_Point();
+					shapeArray[num] = new e13_01_Point();
 					// 処理を抜ける
 					break;
 				// 2を入力した場合
@@ -40,7 +45,7 @@ public class e13_01_ShapeTester {
 					// 入力値を水平直線のながさとする
 					int horzLength = stdIn.nextInt();
 					// num個目の配列に水平直線クラスのインスタンスを生成する
-					p[num] = new e13_01_HorzLine(horzLength);
+					shapeArray[num] = new e13_01_HorzLine(horzLength);
 					// 処理を抜ける
 					break;
 				// 3を入力した場合
@@ -50,7 +55,7 @@ public class e13_01_ShapeTester {
 					// 入力値を垂直直線のながさとする
 					int vertLength = stdIn.nextInt();
 					// num個目の配列に垂直直線クラスのインスタンスを生成する
-					p[num] = new e13_01_VertLine(vertLength);
+					shapeArray[num] = new e13_01_VertLine(vertLength);
 					// 処理を抜ける
 					break;
 				// 4を入力した場合
@@ -64,14 +69,15 @@ public class e13_01_ShapeTester {
 					// 入力値を長方形の高さとする
 					int height = stdIn.nextInt();
 					// num個目の配列に長方形クラスのインスタンスを生成する
-					p[num] = new e13_01_Rectangle(width, height);
+					shapeArray[num] = new e13_01_Rectangle(width, height);
 					break;
+
 			}
 		}
 		// 配列で生成したすべての図形を表示する
-		for(e13_01_Shape s : p){
+		for(e13_01_Shape shape : shapeArray){
 			// 図形を描画する
-			s.print();
+			shape.print();
 			// 改行
 			System.out.println();
 		}
