@@ -14,7 +14,7 @@ public class e10_02_ExId {
 	// 何番までの識別番号を与えたか
 	private static int counter = 0;
 	// 識別番号の増加間隔
-	private static int n = 1;
+	private  static int incrementNum = 1;
 	// 識別番号
 	private int id;
 
@@ -36,7 +36,7 @@ public class e10_02_ExId {
 	 * @return int 識別番号の増加間隔
 	 */
 	public static int getN(){
-		return n;
+		return incrementNum;
 	}
 	/**
 	 * 識別番号の増加間隔を変更するクラスメソッド
@@ -45,14 +45,14 @@ public class e10_02_ExId {
 	 * @param changeN 増加間隔を変更値
 	 */
 	public static void setN(int changeN){
-		n = changeN;
+		incrementNum = changeN;
 	}
 
 	// コンストラクタ
 	public e10_02_ExId(){
-		counter += n;
+		counter += incrementNum;
 		// 何番までの識別番号を与えたかの値をインクリメントして識別番号にいれる
-		id = counter;
+		this.id = counter;
 	}
 	/**
 	 * そのインスタンスの識別番号を返すインスタンスメソッド
@@ -61,7 +61,7 @@ public class e10_02_ExId {
 	 * @return int 識別番号
 	 */
 	public int getId(){
-		return id;
+		return this.id;
 	}
 
 }
