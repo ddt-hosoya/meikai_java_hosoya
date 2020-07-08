@@ -93,8 +93,10 @@ public class e09_05_Tester {
 		// 改行
 		System.out.println();
 
+		// 判定を続けるかの回答
+		int answer;
 		// 判定を続けますか？で「No」を選択しない限り繰り返す
-		while(true){
+		do{
 			// 期間内かどうかを判定するメッセージを表示
 			System.out.println("入力する日付が期間内であるかどうか判定します。");
 			// 年の入力を促す
@@ -124,10 +126,9 @@ public class e09_05_Tester {
 			// 判定を続けるか尋ねる
 			System.out.print("判定を続けますか？ Yes...0, No...1：");
 			// 入力値を代入する
-			int answer = stdIn.nextInt();
+			answer = stdIn.nextInt();
 			// 判定を続けますか？で「No」を選択した場合、繰り返しを抜ける
-			if(answer == 1){ break; }
-		}
+		}while(answer == 0);
 
 	}
 }

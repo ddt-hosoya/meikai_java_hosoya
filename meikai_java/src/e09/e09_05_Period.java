@@ -10,16 +10,16 @@ package e09;
  */
 public class e09_05_Period {
 	// 開始日
-	private e09_05_Day from;
+	private e09_05_Day dateFrom;
 	// 終了日
-	private e09_05_Day to;
+	private e09_05_Day dateTo;
 
 	// コンストラクタ
-	e09_05_Period(e09_05_Day from, e09_05_Day to){
+	e09_05_Period(e09_05_Day dateFrom, e09_05_Day dateTo){
 		// 日付クラスの変数を受け取り開始日とする
-		this.from = from;
+		this.dateFrom = dateFrom;
 		// 日付クラスの変数を受け取り終了日とする
-		this.to= to;
+		this.dateTo= dateTo;
 	}
 
 	/**
@@ -30,7 +30,7 @@ public class e09_05_Period {
 	 */
 	public String getFrom(){
 		// 文字列で返す
-		return toString(from);
+		return toString(this.dateFrom);
 	}
 	/**
 	 *  終了日の日付を返すメソッド
@@ -40,18 +40,18 @@ public class e09_05_Period {
 	 */
 	public String getTo(){
 		// 文字列で返す
-		return toString(to);
+		return toString(this.dateTo);
 	}
 
 	/**
 	 *  開始日を更新するメソッド
 	 * @author t.hosoya
 	 * @since 20190624
-	 * @param inputfrom 開始日
+	 * @param inputFrom 開始日
 	 */
-	public void setFrom(e09_05_Day inputfrom){
+	public void setFrom(e09_05_Day inputFrom){
 		// 日付クラスの変数を受け取り開始日にいれる
-		from = inputfrom;
+		this.dateFrom = inputFrom;
 	}
 	/**
 	 *  終了日を更新するメソッド
@@ -59,9 +59,9 @@ public class e09_05_Period {
 	 * @since 20190624
 	 * @param 終了日
 	 */
-	public void setTo(e09_05_Day inputto){
+	public void setTo(e09_05_Day inputTo){
 		// 日付クラスの変数を受け取り終了日にいれる
-		to = inputto;
+		this.dateTo = inputTo;
 	}
 
 	/**
@@ -73,28 +73,28 @@ public class e09_05_Period {
 	 */
 	public boolean isInPriod(e09_05_Day inputDay){
 		// 入力年が開始年より小さいか、終了年より大きい場合
-		if(inputDay.getYear() < from.getYear() || inputDay.getYear() > to.getYear()){
+		if(inputDay.getYear() < dateFrom.getYear() || inputDay.getYear() > dateTo.getYear()){
 			// 期間外の為falseを返す
 			return false;
 		// 期間内の年の場合
 		}else{
 			// 入力年と開始年が同じかつ、入力月が開始月より小さい場合
-			if(inputDay.getYear() == from.getYear() && inputDay.getMonth() < from.getMonth()){
+			if(inputDay.getYear() == dateFrom.getYear() && inputDay.getMonth() < dateFrom.getMonth()){
 				// 期間外の為falseを返す
 				return false;
 			// 入力年と開始年が同じかつ、入力月と開始月が同じかつ、入力日が開始日より小さい場合
-			}else if(inputDay.getYear() == from.getYear() && inputDay.getMonth() == from.getMonth()
-					&& inputDay.getDate() < from.getDate()){
+			}else if(inputDay.getYear() == dateFrom.getYear() && inputDay.getMonth() == dateFrom.getMonth()
+					&& inputDay.getDate() < dateFrom.getDate()){
 				// 期間外の為falseを返す
 				return false;
 			}
 			// 入力年と終了年が同じかつ、入力月が終了月より大きい場合
-			if(inputDay.getYear() == to.getYear() && inputDay.getMonth() > to.getMonth()){
+			if(inputDay.getYear() == dateTo.getYear() && inputDay.getMonth() > dateTo.getMonth()){
 				// 期間外の為falseを返す
 				return false;
 			// 入力年と終了年が同じかつ、入力月と終了月が同じかつ、入力日が終了日より大きい場合
-			}else if(inputDay.getYear() == to.getYear() && inputDay.getMonth() == to.getMonth()
-					&& inputDay.getDate() > to.getDate()){
+			}else if(inputDay.getYear() == dateTo.getYear() && inputDay.getMonth() == dateTo.getMonth()
+					&& inputDay.getDate() > dateTo.getDate()){
 				// 期間外の為falseを返す
 				return false;
 			}
