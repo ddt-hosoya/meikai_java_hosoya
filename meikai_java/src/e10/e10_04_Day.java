@@ -139,7 +139,15 @@ public class e10_04_Day {
 	// 引数がint型ひとつのコンストラクタ
 	public e10_04_Day(int year){
 		// 引数で受け取った値を年とする
+		if(year < 0){
+			//マイナスの値を受け取った場合は符号を＋に変更する
+			year = -year;
+		}
 		this.year = year;
+		// プログラム実行時の月をいれる
+		this.month = staticM;
+		// プログラム実行時の日付をいれる
+		this.date = staticD;
 	}
 	// 引数がint型ふたつのコンストラクタ
 	public e10_04_Day(int year, int month){
