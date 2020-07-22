@@ -1,5 +1,5 @@
 
-import e11.e11_01_DateId;
+import e11.id.e11_01_DateId;
 /**
  *  DateIdクラステスト用
  * @author t.hosoya
