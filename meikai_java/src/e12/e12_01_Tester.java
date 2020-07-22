@@ -15,7 +15,8 @@ public class e12_01_Tester {
 		// 移動距離を表示する
 		System.out.println("総移動距離：" + mycar.getDistance());
 		// 繰り返し処理
-		while(true){
+		int next = 1;
+		while(next == 1){
 			// 移動
 			System.out.print("移動 X：");
 			double x = stdIn.nextDouble();
@@ -36,7 +37,7 @@ public class e12_01_Tester {
 
 			// 繰り返すかたずねる
 			System.out.print("移動を続けますか Yes...1/No...0：");
-			if(stdIn.nextInt() == 0){ break; }
+			next = stdIn.nextInt();
 		}
 	}
 }

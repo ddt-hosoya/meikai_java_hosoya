@@ -38,12 +38,12 @@ public class e12_01_ExtendsCar extends e12_01_Car{
 	public boolean move(double dx, double dy){
 		// 移動できたかどうか
 		boolean result = super.move(dx, dy);
-		// 移動距離
-		double dist = Math.sqrt(dx * dx + dy * dy);
 		// 移動完了した場合
 		if(result){
+			// 移動距離
+			double dist = Math.sqrt(dx * dx + dy * dy);
 			// 移動距離を加算
-			distance += dist;
+			this.distance += dist;
 		}
 		// 移動できたかどうかを返す
 		return result;
