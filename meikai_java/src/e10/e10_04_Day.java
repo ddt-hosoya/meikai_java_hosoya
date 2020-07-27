@@ -129,41 +129,35 @@ public class e10_04_Day {
 	// コンストラクタ
 	// 引数を受け取らないインストラクタ
 	public e10_04_Day(){
-		// プログラム実行時の年をいれる
-		this.year = staticY;
-		// プログラム実行時の月をいれる
-		this.month = staticM;
-		// プログラム実行時の日をいれる
-		this.date = staticD;
+		// 年月日にプログラム実行時の年月日を設定
+		this(staticY, staticM, staticD);
 	}
 	// 引数がint型ひとつのコンストラクタ
 	public e10_04_Day(int year){
+		// 引数で受け取った値を年とし、月日はプログラム実行時の月日とする
+		this(year, staticM, staticD);
+	}
+	// 引数がint型ふたつのコンストラクタ
+	public e10_04_Day(int year, int month){
+		// 引数で受け取った値を年月とし、日はプログラム実行時の日とする
+		this(year, month, staticD);
+	}
+	// 引数がint型みっつのコンストラクタ
+	public e10_04_Day(int year, int month, int date){
 		// 引数で受け取った値を年とする
 		if(year < 0){
 			//マイナスの値を受け取った場合は符号を＋に変更する
 			year = -year;
 		}
 		this.year = year;
-		// プログラム実行時の月をいれる
-		this.month = staticM;
-		// プログラム実行時の日付をいれる
-		this.date = staticD;
-	}
-	// 引数がint型ふたつのコンストラクタ
-	public e10_04_Day(int year, int month){
-		// 引数で受け取った値を年とする
-		this(year);
-		// 引数で受け取った値が0より小さいならば1月とする
+
+		// 引数で受け取った月の値が0より小さいならば1月とする
 		if(month < 1){ month = 1; }
 		// 引数で受け取った値が12より大きい場合12月とする
 		if(month > 12){ month = 12; }
 		// 値を月にいれる
 		this.month = month;
-	}
-	// 引数がint型みっつのコンストラクタ
-	public e10_04_Day(int year, int month, int date){
-		// 引数で受け取った値を年と月にいれる
-		this(year, month);
+
 		// その年月の月最終日を調べる
 		int lastDay = lastDayOfMonth(this.year, this.month);
 		// 引数で受け取った値が1より小さい場合1日とする
@@ -172,6 +166,7 @@ public class e10_04_Day {
 		if(date > lastDay){ date = lastDay; }
 		// 値を日にいれる
 		this.date = date;
+
 	}
 	// 引数がクラス型変数のコンストラクタ
 	public e10_04_Day(e10_04_Day day){
@@ -345,10 +340,8 @@ public class e10_04_Day {
 	 * @return int 前後関係の判定結果
 	 */
 	public int beforeAndAfter(e10_04_Day anotherDay){
-		// 自身の持つフィールドでインスタンスを生成
-		e10_04_Day oneDay = new e10_04_Day(year, month, date);
 		// 二つの日付を比較するクラスメソッドを呼び、anotherDayがより前の日付ならば-1／同じ日付ならば0／より後ろの日付ならば1を返す
-		int answer = beforeAndAfter(oneDay , anotherDay);
+		int answer = beforeAndAfter(this , anotherDay);
 
 		// 判定を返す
 		return answer;
