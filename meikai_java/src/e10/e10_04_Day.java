@@ -99,8 +99,12 @@ public class e10_04_Day {
 	 * @return int 前後関係の判定結果
 	 */
 	public static int  beforeAndAfter(e10_04_Day oneDay, e10_04_Day anotherDay){
-		// anotherDayがより前の日付ならば-1／同じ日付ならば0／より後ろの日付ならば1を返す
+		// anotherDayがより前の日付ならば-1／同じ日付ならば0／より後ろの日付ならば1／比較不能であれば9を返す
 		int answer = 0;
+		if(oneDay == null || anotherDay == null){
+			answer = 9;
+			return answer;
+		}
 		// 日付anotherDayと等しい場合
 		if(oneDay.year == anotherDay.year && oneDay.month == anotherDay.month && oneDay.date == anotherDay.date){
 			// 0を返す
@@ -168,6 +172,7 @@ public class e10_04_Day {
 		this.date = date;
 
 	}
+	//TODO 修正
 	// 引数がクラス型変数のコンストラクタ
 	public e10_04_Day(e10_04_Day day){
 		// インスタンスの値、年、月、日をいれる
@@ -276,9 +281,12 @@ public class e10_04_Day {
 	 * @param d 日付
 	 * @return boolean 日付dと一致しているか否か
 	 */
-	public boolean equalTo(e10_04_Day d){
+	public boolean equalTo(e10_04_Day day){
+		if( day == null){
+			return false;
+		}
 		// 年、月、日が一致していればtrueを返す
-		return year == d.year && month == d.month && date == d.date;
+		return year == day.year && month == day.month && date == day.date;
 	}
 
 	/**
