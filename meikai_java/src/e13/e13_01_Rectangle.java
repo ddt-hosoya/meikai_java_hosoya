@@ -17,6 +17,43 @@ public class e13_01_Rectangle extends e13_01_Shape {
 		this.height = height;
 	}
 	/**
+	 * 長方形の幅を表すint型のフィールドのセッタ
+	 * @author t.hosoya
+	 * @since 20200914
+	 * @param width
+	 */
+	public void setWidth(int width){
+		this.width = width;
+	}
+	/**
+	 * 長方形の幅を表すint型のフィールドのゲッタ
+	 * @author t.hosoya
+	 * @since 20200914
+	 * @return width
+	 */
+	public int getWidth(){
+		return width;
+	}
+	/**
+	 * 長方形の高さを表すint型のフィールドのセッタ
+	 * @author t.hosoya
+	 * @since 20200914
+	 * @param height
+	 */
+	public void setHeight(int height){
+		this.width = height;
+	}
+	/**
+	 * 長方形の高さを表すint型のフィールドのゲッタ
+	 * @author t.hosoya
+	 * @since 20200914
+	 * @return height
+	 */
+	public int getHeight(){
+		return height;
+	}
+
+	/**
 	 * メソッドtoStringは長方形に関する図形情報を表す文字列を返却します
 	 * @author t.hosoya
 	 * @since 20190701

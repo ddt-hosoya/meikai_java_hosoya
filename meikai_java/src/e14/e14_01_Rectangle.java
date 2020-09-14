@@ -7,10 +7,6 @@ import e13.e13_01_Rectangle;
  * @since 20200115
  */
 public class e14_01_Rectangle extends e13_01_Rectangle implements e14_01_Plane2D {
-	// 底辺の長さ
-	private int width;
-	// 高さ
-	private int height;
 	/**
 	 * 面積表示機能を実装した長方形クラスのコンストラクタ
 	 * @author t.hosoya
@@ -21,10 +17,6 @@ public class e14_01_Rectangle extends e13_01_Rectangle implements e14_01_Plane2D
 	public e14_01_Rectangle(int width, int height){
 		// スーパークラスのメソッドを継承
 		super(width, height);
-		// 底辺の長さを設定
-		this.width = width;
-		// 高さを設定
-		this.height = height;
 	}
 
 	/**
@@ -34,6 +26,6 @@ public class e14_01_Rectangle extends e13_01_Rectangle implements e14_01_Plane2D
 	 */
 	public int getArea(){
 		// 面積（底辺×高さ）を返却
-		return width * height;
+		return getWidth() * getHeight();
 	}
 }
