@@ -172,11 +172,43 @@ public class e10_04_Day {
 		this.date = date;
 
 	}
-	//TODO 修正
+
 	// 引数がクラス型変数のコンストラクタ
 	public e10_04_Day(e10_04_Day day){
-		// インスタンスの値、年、月、日をいれる
-		this(day.year, day.month, day.date);
+		// 引数で受け取ったdayクラスがnullの場合
+		if(day == null){
+			// 年月日にプログラム実行時の年月日を設定
+			this.year = staticY;
+			this.month = staticM;
+			this.date = staticD;
+		// 引数で受け取ったdayクラスがnullでなければクラスのフィールドの値を年月日に設定する
+		}else{
+			// 引数で受け取った値を年とする
+			int paramYear = day.year;
+			int paramMonth = day.month;
+			int paramDate = day.date;
+			if(paramYear < 0){
+				//マイナスの値を受け取った場合は符号を＋に変更する
+				paramYear = -paramYear;
+			}
+			this.year = paramYear;
+
+			// 引数で受け取った月の値が0より小さいならば1月とする
+			if(paramMonth < 1){ paramMonth = 1; }
+			// 引数で受け取った値が12より大きい場合12月とする
+			if(paramMonth > 12){ paramMonth = 12; }
+			// 値を月にいれる
+			this.month = paramMonth;
+
+			// その年月の月最終日を調べる
+			int lastDay = lastDayOfMonth(this.year, this.month);
+			// 引数で受け取った値が1より小さい場合1日とする
+			if(paramDate < 1){ paramDate = 1; }
+			// 引数で受け取った値が月最終日より大きい場合最終日とする
+			if(paramDate > lastDay){ paramDate = lastDay; }
+			// 値を日にいれる
+			this.date = paramDate;
+		}
 	}
 
 	/**
