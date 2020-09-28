@@ -35,6 +35,12 @@ public class e10_04_Day {
 	private int month = 1;
 	private int date = 1;
 
+	// 日付を比較したときの返却値
+	public static final int FORMER_DATE = -1;
+	public static final int SAME_DATE = 0;
+	public static final int LATTER_DATE = 1;
+	public static final int UNEXPECTED_DATE = 9;
+
 	// クラス変数
 	private static int staticY;
 	private static int staticM;
@@ -100,9 +106,9 @@ public class e10_04_Day {
 	 */
 	public static int  beforeAndAfter(e10_04_Day oneDay, e10_04_Day anotherDay){
 		// anotherDayがより前の日付ならば-1／同じ日付ならば0／より後ろの日付ならば1／比較不能であれば9を返す
-		int answer = 0;
+		int answer = SAME_DATE;
 		if(oneDay == null || anotherDay == null){
-			answer = 9;
+			answer = UNEXPECTED_DATE;
 			return answer;
 		}
 		// 日付anotherDayと等しい場合
@@ -114,14 +120,14 @@ public class e10_04_Day {
 		// anotherDayがより前の日付の場合
 		if(oneDay.year > anotherDay.year || (oneDay.year == anotherDay.year && oneDay.month > anotherDay.month) ||
 				(oneDay.year == anotherDay.year && oneDay.month == anotherDay.month || oneDay.date > anotherDay.date)){
-			answer = -1;
+			answer = FORMER_DATE;
 			// -1を返す
 			return answer;
 		}
 		// anotherDayがより後ろの日付ならば1を返す
 		if(oneDay.year < anotherDay.year || (oneDay.year == anotherDay.year && oneDay.month < anotherDay.month) ||
 				(oneDay.year == anotherDay.year && oneDay.month == anotherDay.month || oneDay.date < anotherDay.date)){
-			answer = 1;
+			answer = LATTER_DATE;
 			// 1を返す
 			return answer;
 		}

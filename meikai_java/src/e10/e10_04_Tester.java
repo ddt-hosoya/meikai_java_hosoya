@@ -113,16 +113,16 @@ public class e10_04_Tester {
 			}
 			// 二つの日付の前後関係を判定する(インスタンスメソッド)
 			switch(oneDay.beforeAndAfter(anotherDay)){
-				case -1:
+				case e10_04_Day.FORMER_DATE:
 					System.out.printf("%sは%sより前の日付です。\n\n", anotherDay, oneDay);
 					break;
-				case 0:
+				case e10_04_Day.SAME_DATE:
 					System.out.printf("%sは%sと同じ日付です。\n\n", anotherDay, oneDay);
 					break;
-				case 1:
+				case e10_04_Day.LATTER_DATE:
 					System.out.printf("%sは%sより後ろの日付です。\n\n", anotherDay, oneDay);
 					break;
-				case 9:
+				case e10_04_Day.UNEXPECTED_DATE:
 					System.out.printf("比較できませんでした。\n\n");
 					break;
 			}
