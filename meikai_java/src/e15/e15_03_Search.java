@@ -32,38 +32,33 @@ public class e15_03_Search {
 				replaceString = replaceString + " ";
 			}
 		}else{
-
+			// ループ繰り返し用フラグ宣言
 			boolean continueFlg;
-			// ループカウンタ
-			int roopCount = 0;
+
+			// s1内でs2が最初に出現するインデックスの場合
+			// s1の文字列探索開始位置
+			int formIdx = 0;
+			// s1の文字列内でs2が出現するまでの文字列をスペースで置き換えた文字列を生成する
+			replaceString = joinSpaceStrings(s1, s2, replaceString, idx, formIdx);
+
+			// s1内でs2が2番目以降で出現するインデックスの場合
 			do{
 				// ループ繰り返し用フラグ初期化
 				continueFlg = false;
 
-				// s1内でs2が最初に出現するインデックスの場合
-				if(roopCount == 0){
-					// s1の文字列探索開始位置
-					int formIdx = 0;
-					// s1の文字列内でs2が出現するまでの文字列をスペースで置き換えた文字列を生成する
-					replaceString = joinSpaceStrings(s1, s2, replaceString, idx, formIdx);
-
-				// s1内でs2が2番目以降で出現するインデックスの場合
-				}else{
-					// s1の文字列探索開始位置
-					int formIdx = idx + s2Length;
-					// s1内の文字列探索開始位置以降でs2が一致するインデックス
-					idx = s1.indexOf(s2, formIdx);
-					// s1の文字列内でs2が出現するまでの文字列をスペースで置き換えた文字列を生成する
-					replaceString = joinSpaceStrings(s1, s2, replaceString, idx - formIdx, formIdx);
-				}
+				// s1の文字列探索開始位置
+				formIdx = idx + s2Length;
+				// s1内の文字列探索開始位置以降でs2が一致するインデックス
+				idx = s1.indexOf(s2, formIdx);
+				// s1の文字列内でs2が出現するまでの文字列をスペースで置き換えた文字列を生成する
+				replaceString = joinSpaceStrings(s1, s2, replaceString, idx - formIdx, formIdx);
 
 				// s1内でs2が最後に出現するインデックスでない場合
 				if(idx != s1.lastIndexOf(s2)){
 					// ループ繰り返し用フラグをたてる
 					continueFlg = true;
-					// ループカウンタをインクリメント
-					roopCount++;
 				}
+
 			}while(continueFlg);
 
 
