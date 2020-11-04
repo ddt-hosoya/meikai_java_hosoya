@@ -26,25 +26,13 @@ public class e14_02_Tester {
 
 		// 色番号
 		int colorNum;
-		// 繰り返し確認用フラグ
-		boolean continueFlg;
-		// 変える色を選ぶ
-		do{
-			// 繰り返し確認用フラグを一旦falseにする
-			continueFlg = false;
-			// 何色に変更するか入力を促す
-			System.out.print("何色に変更しますか？ 数字を入力してください。\n"
-					+ "黒=0, 赤=1, 緑=2, 青=3, 豹柄=4 : ");
-			// 入力値を色番号に設定する
-			colorNum = stdIn.nextInt();
-			// 色番号が用意した色に無ければ
-			if(colorNum < 0 || colorNum > 4){
-				// 繰り返し用フラグをtrueにする
-				continueFlg = true;
-				// 入力してほしい数字範囲を提示する
-				System.out.println("0~4の数字で入力してください。");
-			}
-		}while(continueFlg);
+
+		// 何色に変更するか入力を促す
+		System.out.print("何色に変更しますか？ 数字を入力してください。\n"
+				+ "黒=0, 赤=1, 緑=2, 青=3, 豹柄=4 : ");
+		// 入力値を色番号に設定する
+		colorNum = stdIn.nextInt();
+
 		// 上記で設定した色番号にスキンの色を変更する
 		robotPet.changeSkin(colorNum);
 

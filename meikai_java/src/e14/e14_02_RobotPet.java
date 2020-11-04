@@ -10,6 +10,11 @@ public class e14_02_RobotPet extends RobotPet implements Skinnable {
 	public e14_02_RobotPet(String name, String masterName) {
 		super(name, masterName);
 	}
+	// スキンを初期化するコンストラクタ
+	public e14_02_RobotPet(String name, String masterName, int skin) {
+		super(name, masterName);
+		this.skin = skin;
+	}
 
 	/**
 	 * 自己紹介メソッドのオーバーライド
