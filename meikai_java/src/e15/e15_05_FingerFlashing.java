@@ -73,6 +73,13 @@ public class e15_05_FingerFlashing {
 	 * @return	判定結果
 	 */
 	public static String judgeHands(int sum, int oneHand, int otherHand){
+		final int GU = 1;								// グー
+		final int CHOKI = 2;							// チョキ
+		final int PA = 3;								// パー
+		final int SUM_GUGUCHOKI = 4;					// グーグーチョキの合計値
+		final int SUM_GUCHOKICHOKI_OR_GUGUPA = 5;	// グーチョキチョキかグーグーパーの合計値
+		final int SUM_GUPAPA_OR_CHOKICHOKIPA = 7;	// グーパーパーかチョキチョキパーの合計値
+		final int SUM_CHOKIPAPA = 8;					// チョキパーパーの合計値
 
 		// 引き分けケース、勝ちケースに当てはまらなければ負け
 		String result = "負け";
@@ -85,28 +92,28 @@ public class e15_05_FingerFlashing {
 		} else {
 			// 勝ち負け判定
 			switch (sum) {
-				// 和が4の時、手が1の時勝ち
-				case 4:
-					if(oneHand == 1){
+				// 和が4の時、手の種類はグーグーチョキなので、手がグーの時勝ち
+				case SUM_GUGUCHOKI:
+					if(oneHand == GU){
 						result = "勝ち";
 					}
 					break;
-				// 和が5の時、手が1で他の手が2 または、手が3の時勝ち
-				case 5:
-					if((oneHand == 1 && otherHand == 2) || oneHand == 3){
+				// 和が5の時、手の種類はグーチョキチョキかグーグーパーなので、手がグーで他の手がチョキ または、手がパーの時勝ち
+				case SUM_GUCHOKICHOKI_OR_GUGUPA:
+					if((oneHand == GU && otherHand == CHOKI) || oneHand == PA){
 						result = "勝ち";
 					}
 					break;
-				// 和が7の時、手が2で他の手が3か2 または、手が3で他の手が3か1
-				case 7:
-					if((oneHand == 1 && (otherHand == 2 || otherHand == 3))
-							|| (oneHand == 3 && (otherHand == 1 || otherHand == 3))){
+				// 和が7の時、手の種類はグーパーパーかチョキチョキパーなので、手がパーで他の手がグーかパー または、手がチョキで他の手がチョキかパーの時勝ち
+				case SUM_GUPAPA_OR_CHOKICHOKIPA:
+					if((oneHand == GU && (otherHand == CHOKI || otherHand == PA))
+							|| (oneHand == 3 && (otherHand == GU || otherHand == PA))){
 						result = "勝ち";
 					}
 					break;
-				// 和が8の時、手が2
-				case 8:
-					if(oneHand == 2){
+				// 和が8の時、手の種類はチョキパーパーなので、手がチョキの時勝ち
+				case SUM_CHOKIPAPA:
+					if(oneHand == CHOKI){
 						result = "勝ち";
 					}
 					break;
