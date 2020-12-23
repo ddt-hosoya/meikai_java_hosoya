@@ -17,6 +17,14 @@ public class e13_03_ComputerPlayer extends e13_03_Player {
 		selectHand();
 	}
 	/**
+	 * 出す手のゲッタ
+	 * @author t.hosoya
+	 * @since 20201209
+	 */
+	public int getHand(){
+		return hand;
+	}
+	/**
 	 * コンピュータプレーヤの出す手をランダムに選択するメソッド
 	 */
 	public void selectHand(){
