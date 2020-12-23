@@ -17,7 +17,7 @@ public class e15_04 {
 		// 小数点以下の桁数pをたずねる
 		System.out.print("小数点以下の桁数p : ");
 		int decimalPlaceP = stdIn.nextInt();
-		// 小数点以下の桁数pをたずねる
+		// 小数点以下の桁数wをたずねる
 		System.out.print("全体の桁数w : ");
 		int digitNumberW = stdIn.nextInt();
 		// 浮動小数点数値xを、小数点以下の部分をp桁で、全体を少なくともw桁に表示する
