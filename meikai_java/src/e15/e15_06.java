@@ -17,17 +17,21 @@ public class e15_06 {
 		// 円周率
 		final double PI = 3.14;
 
-		// コマンドライン引数から半径を受け取る
-		double radius = Double.parseDouble(args[INDEX]);
-		// 円周の長さを求める(直径×円周率)
-		double circleLength = radius * ADJUST_RADIUS * PI;
-		// 円の面積を求める(半径×半径×円周率)
-		double circleArea = radius * radius * PI;
+		// 引数が一つ以上ある場合
+		if(args.length >= 1){
+			// コマンドライン引数から半径を受け取る
+			double radius = Double.parseDouble(args[INDEX]);
+			// 円周の長さを求める(直径×円周率)
+			double circleLength = radius * ADJUST_RADIUS * PI;
+			// 円の面積を求める(半径×半径×円周率)
+			double circleArea = radius * radius * PI;
 
-		// 円周の長さと面積を表示する
-		System.out.println("円周の長さ：" + circleLength
-				+ "\n円の面積：" + circleArea);
-
+			// 円周の長さと面積を表示する
+			System.out.println("円周の長さ：" + circleLength
+					+ "\n円の面積：" + circleArea);
+		// 引数がない場合
+		} else {
+			System.out.println("引数がありません。");
+		}
 	}
-
 }
