@@ -17,6 +17,14 @@ public class e13_03_HumanPlayer extends e13_03_Player {
 		selectHand();
 	}
 	/**
+	 * 出す手のゲッタ
+	 * @author t.hosoya
+	 * @since 20201209
+	 */
+	public int getHand(){
+		return hand;
+	}
+	/**
 	 * 人間の出す手を選択させ決定するメソッド
 	 */
 	public void selectHand(){
