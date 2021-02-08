@@ -15,25 +15,25 @@ import java.util.Scanner;
 public class e16_03 {
 	/**
 	 * 引数で渡された位置の値を入れ替える
-	 * @param a 配列
+	 * @param array 配列
 	 * @param idx1 入れ替え位置
 	 * @param idx2 入れ替え位置
 	 */
-	static void swap(int[] a, int idx1, int idx2){
-		int t = a[idx1];
-		a[idx1] = a[idx2];
-		a[idx2] = t;
+	static void swap(int[] array, int idx1, int idx2){
+		int saveIdx1 = array[idx1];
+		array[idx1] = array[idx2];
+		array[idx2] = saveIdx1;
 	}
 	/**
 	 * 配列を反転させる
-	 * @param a 配列
+	 * @param array 配列
 	 */
-	static void reverse(int[] a){
+	static void reverse(int[] array){
 		try{
 			// 配列のインデックスごとに値を入れ替える
-			for(int i = 0; i < a.length / 2;  i++){
-				// ArrayIndexOutOfBoundsException再現用バグ（正しくはa.length - i - 1)
-				swap(a, i, a.length - i);
+			for(int index = 0; index < array.length / 2;  index++){
+				// ArrayIndexOutOfBoundsException再現用バグ（正しくはarray.length - index - 1)
+				swap(array, index, array.length - index);
 			}
 		// 配列の存在しないインデックスが指定された場合の例外補足
 		}catch(ArrayIndexOutOfBoundsException e){
@@ -55,26 +55,26 @@ public class e16_03 {
 		// 配列xの要素数の入力を促す
 		System.out.print("要素数：");
 		// 入力値で要素数初期化
-		int num = stdIn.nextInt();
+		int arrayNum = stdIn.nextInt();
 		// 配列xを要素数で初期化
-		int[] x = new int[num];
+		int[] arrayForDisplay = new int[arrayNum];
 
 		// 要素数分ループ
-		for(int i = 0; i < num; i++){
+		for(int index = 0; index < arrayNum; index++){
 			// 各indexごとに格納する値を尋ねる
-			System.out.print("x[" + i + "]:");
+			System.out.print("arrayForDisplay[" + index + "]:");
 			// 入力値を配列xに格納する
-			x[i] = stdIn.nextInt();
+			arrayForDisplay[index] = stdIn.nextInt();
 		}
 		// NullPointerException再現用バグ埋め込み
-		x = null;
+		arrayForDisplay = null;
 		// 配列xの要素の並びを反転
-		reverse(x);
+		reverse(arrayForDisplay);
 
 		System.out.println("要素の並びを反転しました。");
 
-		for(int i = 0; i < num; i++){
-			System.out.println("x[" + i + "] = " + x[i]);
+		for(int index = 0; index < arrayNum; index++){
+			System.out.println("arrayForDisplay[" + index + "] = " + arrayForDisplay[index]);
 		}
 	}
 
